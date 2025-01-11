@@ -16,7 +16,7 @@ public class ObjectSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (BoothGlobalObjects.CharOnScreen)
+        if (CharacterInfo.middle)
         {
             if (CharacterInfo.AorR == 'n')
             {
@@ -29,13 +29,10 @@ public class ObjectSpawn : MonoBehaviour
                 
             }
         }
-        else
+        if (CharacterInfo.AorR == 'a' || CharacterInfo.AorR == 'r')
         {
-            if (CharacterInfo.AorR == 'a' || CharacterInfo.AorR == 'r')
-            {
-                ObjectsGone();
-                objects = false;
-            }
+            ObjectsGone();
+            objects = false;
         }
     }
 

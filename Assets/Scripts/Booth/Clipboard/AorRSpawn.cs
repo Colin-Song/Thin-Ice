@@ -27,13 +27,11 @@ public class AorRSpawn : MonoBehaviour
                 ButtonSpawn();
             }
         }
-        else
+
+        if (CharacterInfo.AorR == 'a' || CharacterInfo.AorR == 'r')
         {
-            if (buttonsOn)
-            {
-                ButtonDelete();
-                buttonsOn = false;
-            }
+            ButtonDelete();
+            buttonsOn = false;
         }
     }
     void ButtonSpawn()

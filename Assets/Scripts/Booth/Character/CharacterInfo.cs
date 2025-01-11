@@ -7,7 +7,7 @@ public class CharacterInfo : MonoBehaviour
     public static int age, height;
     public static bool killer, tattoo, charDelete;
 
-    private static bool prewalk, middle, afterwalkr, afterwalkl;
+    public static bool prewalk, middle, afterwalkr, afterwalkl;
     
     void Start()
     {
@@ -55,22 +55,26 @@ public class CharacterInfo : MonoBehaviour
             {
                 middle = false;
                 afterwalkr = true;
+                BoothGlobalObjects.IsClipboardOpen = false;
+                BoothGlobalObjects.IsClipboardDragging = false;
             }
             else if (AorR == 'r')
             {
                 middle = false;
                 afterwalkl = true;
+                BoothGlobalObjects.IsClipboardOpen = false;
+                BoothGlobalObjects.IsClipboardDragging = false;
             }
         }
         else if (afterwalkr || afterwalkl)
         {
             if (afterwalkr)
             {
-                transform.position = new Vector3(transform.position.x + 0.2f, transform.position.y, transform.position.z);
+                transform.position = new Vector3(transform.position.x + 0.01f, transform.position.y, transform.position.z);
             }
             else
             {
-                transform.position = new Vector3(transform.position.x - 0.2f, transform.position.y, transform.position.z);
+                transform.position = new Vector3(transform.position.x - 0.01f, transform.position.y, transform.position.z);
             }
 
             if (transform.position.x <= -11.8f || transform.position.x >= 11.8f)

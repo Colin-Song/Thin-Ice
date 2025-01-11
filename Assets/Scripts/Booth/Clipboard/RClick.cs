@@ -21,8 +21,6 @@ public class RClick : MonoBehaviour
                 if (handCollider.bounds.Intersects(rejectCollider.bounds))
                 {
                     CharacterInfo.AorR = 'r';
-                    BoothGlobalObjects.IsClipboardOpen = false;
-                    AorRSpawn.buttonsOn = false;
                 }
             }
         }

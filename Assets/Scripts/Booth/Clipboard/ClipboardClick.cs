@@ -16,29 +16,32 @@ public class ClipboardClick : MonoBehaviour
 
     private void Update()
     {
-        if (!BoothGlobalObjects.IsIDDragging && !BoothGlobalObjects.IsIDOpen && !BoothGlobalObjects.IsFlashlightHolding)
+        if (CharacterInfo.AorR == 'n')
         {
-            if (Input.GetMouseButtonDown(1))
+            if (!BoothGlobalObjects.IsIDDragging && !BoothGlobalObjects.IsIDOpen && !BoothGlobalObjects.IsFlashlightHolding)
             {
-                Collider2D handCollider = hand.GetComponent<Collider2D>();
-                Collider2D clipboardCollider = GetComponent<Collider2D>();
-                if (handCollider.bounds.Intersects(clipboardCollider.bounds))
+                if (Input.GetMouseButtonDown(1))
                 {
-                    BoothGlobalObjects.IsClipboardOpen = !BoothGlobalObjects.IsClipboardOpen;
+                    Collider2D handCollider = hand.GetComponent<Collider2D>();
+                    Collider2D clipboardCollider = GetComponent<Collider2D>();
+                    if (handCollider.bounds.Intersects(clipboardCollider.bounds))
+                    {
+                        BoothGlobalObjects.IsClipboardOpen = !BoothGlobalObjects.IsClipboardOpen;
 
-                    if (BoothGlobalObjects.IsClipboardOpen)
-                    {
-                        BoothGlobalObjects.Clipboardposx = transform.position.x;
-                        BoothGlobalObjects.Clipboardposy = transform.position.y;
-                        transform.localScale = bigScale;
-                        transform.position = new Vector3(0, 0, 0);
-                        clipboardCollider.GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("OpenObject");
-                    }
-                    else
-                    {
-                        transform.localScale = smallScale;
-                        transform.position = new Vector3(BoothGlobalObjects.Clipboardposx, BoothGlobalObjects.Clipboardposy, 0);
-                        clipboardCollider.GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("Clipboard");
+                        if (BoothGlobalObjects.IsClipboardOpen)
+                        {
+                            BoothGlobalObjects.Clipboardposx = transform.position.x;
+                            BoothGlobalObjects.Clipboardposy = transform.position.y;
+                            transform.localScale = bigScale;
+                            transform.position = new Vector3(0, 0, 0);
+                            clipboardCollider.GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("OpenObject");
+                        }
+                        else
+                        {
+                            transform.localScale = smallScale;
+                            transform.position = new Vector3(BoothGlobalObjects.Clipboardposx, BoothGlobalObjects.Clipboardposy, 0);
+                            clipboardCollider.GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("Clipboard");
+                        }
                     }
                 }
             }

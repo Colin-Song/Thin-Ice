@@ -21,8 +21,6 @@ public class AClick : MonoBehaviour
                 if (handCollider.bounds.Intersects(acceptCollider.bounds))
                 {
                     CharacterInfo.AorR = 'a';
-                    BoothGlobalObjects.IsClipboardOpen = false;
-                    AorRSpawn.buttonsOn = false;
                 }
             }
         }

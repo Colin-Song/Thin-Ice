@@ -16,41 +16,44 @@ public class ClipboardMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!BoothGlobalObjects.IsIDDragging && !BoothGlobalObjects.IsIDOpen && !BoothGlobalObjects.IsFlashlightHolding)
+        if (CharacterInfo.AorR == 'n')
         {
-            Collider2D handCollider = hand.GetComponent<Collider2D>();
-            Collider2D clipboardCollider = GetComponent<Collider2D>();
-
-            if (handCollider.bounds.Intersects(clipboardCollider.bounds))
+            if (!BoothGlobalObjects.IsIDDragging && !BoothGlobalObjects.IsIDOpen && !BoothGlobalObjects.IsFlashlightHolding)
             {
-                if (!BoothGlobalObjects.IsClipboardOpen)
-                {
-                    if (Input.GetMouseButtonDown(0))
-                    {
-                        BoothGlobalObjects.Clipboardposx = transform.position.x;
-                        BoothGlobalObjects.Clipboardposy = transform.position.y;
-                        BoothGlobalObjects.IsClipboardDragging = true;
-                        offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    }
+                Collider2D handCollider = hand.GetComponent<Collider2D>();
+                Collider2D clipboardCollider = GetComponent<Collider2D>();
 
-                    if (Input.GetMouseButton(0))
+                if (handCollider.bounds.Intersects(clipboardCollider.bounds))
+                {
+                    if (!BoothGlobalObjects.IsClipboardOpen)
                     {
-                        BoothGlobalObjects.IsClipboardDragging = true;
-                    }
-                    else if (Input.GetMouseButtonUp(0))
-                    {
-                        // set dragging to false
-                        BoothGlobalObjects.IsClipboardDragging = false;
+                        if (Input.GetMouseButtonDown(0))
+                        {
+                            BoothGlobalObjects.Clipboardposx = transform.position.x;
+                            BoothGlobalObjects.Clipboardposy = transform.position.y;
+                            BoothGlobalObjects.IsClipboardDragging = true;
+                            offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                        }
+
+                        if (Input.GetMouseButton(0))
+                        {
+                            BoothGlobalObjects.IsClipboardDragging = true;
+                        }
+                        else if (Input.GetMouseButtonUp(0))
+                        {
+                            // set dragging to false
+                            BoothGlobalObjects.IsClipboardDragging = false;
+                        }
                     }
                 }
-            }
 
-            // if dragging
-            if (BoothGlobalObjects.IsClipboardDragging && !BoothGlobalObjects.IsClipboardOpen)
-            {
-                // change position to where mouse is + offset
-                transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
+                // if dragging
+                if (BoothGlobalObjects.IsClipboardDragging && !BoothGlobalObjects.IsClipboardOpen)
+                {
+                    // change position to where mouse is + offset
+                    transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
+                }
             }
-        }  
+        }
     }
 }

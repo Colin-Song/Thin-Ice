@@ -22,13 +22,12 @@ public class CharacterSpawn : MonoBehaviour
             CharSpawn();
         }
 
-        if (character.GetComponent<RectTransform>().anchoredPosition.x <= -11.8 || character.GetComponent<RectTransform>().anchoredPosition.x >= 11.8)
+        //character.GetComponent<RectTransform>().anchoredPosition.x <= -11.8
+        if (CharacterInfo.charDelete)
         {
-            if (CharacterInfo.charDelete)
-            {
-                CharGone();
-                BoothGlobalObjects.CharOnScreen = false;
-            }
+            CharGone();
+            BoothGlobalObjects.CharOnScreen = false;
+            CharacterInfo.charDelete = false;
         }
     }
 
