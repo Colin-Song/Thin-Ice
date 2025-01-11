@@ -22,7 +22,7 @@ public class CharacterSpawn : MonoBehaviour
             CharSpawn();
         }
 
-        if (CharacterInfo.AorR == 'a' || CharacterInfo.AorR == 'r')
+        if (character.GetComponent<RectTransform>().anchoredPosition.x <= -11.8 || character.GetComponent<RectTransform>().anchoredPosition.x >= 11.8)
         {
             if (CharacterInfo.charDelete)
             {

@@ -9,6 +9,7 @@ public class ClipboardClick : MonoBehaviour
 
     void Start()
     {
+        hand = GameObject.Find("Hand");
         bigScale = new Vector3(9f, 8.8f, 1f);
         smallScale = new Vector3(1.6343f, 2.0901f, 1f);
     }

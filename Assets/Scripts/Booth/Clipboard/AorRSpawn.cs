@@ -31,8 +31,8 @@ public class AorRSpawn : MonoBehaviour
         {
             if (buttonsOn)
             {
-                buttonsOn = false;
                 ButtonDelete();
+                buttonsOn = false;
             }
         }
     }

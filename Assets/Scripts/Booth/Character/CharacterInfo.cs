@@ -7,7 +7,7 @@ public class CharacterInfo : MonoBehaviour
     public static int age, height;
     public static bool killer, tattoo, charDelete;
 
-    private bool prewalk, middle, afterwalkr, afterwalkl;
+    private static bool prewalk, middle, afterwalkr, afterwalkl;
     
     void Start()
     {
@@ -17,6 +17,7 @@ public class CharacterInfo : MonoBehaviour
         age = CharacterAttributes.AGE[Random.Range(1, 2)];
         height = CharacterAttributes.HEIGHT[Random.Range(1, 2)];
         killer = CharacterAttributes.KILLER[Random.Range(1, 2)];
+
         if (killer)
         {
             tattoo = CharacterAttributes.TATTOO[Random.Range(1, 2)];

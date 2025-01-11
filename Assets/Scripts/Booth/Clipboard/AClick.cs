@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RClick : MonoBehaviour
+public class AClick : MonoBehaviour
 {
     public GameObject hand;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -17,13 +17,14 @@ public class RClick : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 Collider2D handCollider = hand.GetComponent<Collider2D>();
-                Collider2D rejectCollider = GetComponent<Collider2D>();
-                if (handCollider.bounds.Intersects(rejectCollider.bounds))
+                Collider2D acceptCollider = GetComponent<Collider2D>();
+                if (handCollider.bounds.Intersects(acceptCollider.bounds))
                 {
-                    CharacterInfo.AorR = 'r';
+                    CharacterInfo.AorR = 'a';
+                    BoothGlobalObjects.IsClipboardOpen = false;
+                    AorRSpawn.buttonsOn = false;
                 }
             }
         }
     }
 }
-

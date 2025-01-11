@@ -7,6 +7,7 @@ public class IDClick : MonoBehaviour
 
     void Start()
     {
+        hand = GameObject.Find("Hand");
         bigScale = new Vector3(7.936f, 3.8879f, 1f);
         smallScale = new Vector3(1.441091f, 0.706f, 1f);
     }
