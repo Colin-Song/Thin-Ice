@@ -4,115 +4,123 @@ using UnityEngine.UI;
 
 public class HoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public ShopItemSO shopItem;    // Reference to the ScriptableObject
-    public RectTransform displayParent; // Parent for the hover display image
-    public Vector2 offset;         // Offset position for the hover display
-    public Button purchaseButton;  // Button to purchase the item
+    [Header("Sprites for Each View")]
+    public Sprite frontSprite;    // For Canvas A
+    public Sprite birdsEyeSprite; // For Canvas B
+
+    [Header("Display Setup")]
+    public RectTransform displayParent; 
+    public Vector2 offset;
+    public Button purchaseButton;  // If you still allow manual purchase
+    public ShopItemSO shopItem;    // If you need references to the item data
 
     private GameObject displayObject;
     private Image displayImage;
-    private bool isPurchased = false; // Flag to track if the item has been purchased
+    private bool isPurchased = false; 
 
     private void Start()
     {
-        Debug.Log("HoverHandler Start() called.");
-
-        if (shopItem == null)
-        {
-            Debug.LogError("ShopItemSO reference is null!");
-            return;
-        }
-
-        if (shopItem.itemImage == null)
-        {
-            Debug.LogError($"ShopItemSO {shopItem.name} does not have an itemImage assigned!");
-            return;
-        }
-
-        Debug.Log($"ShopItemSO {shopItem.name} has an itemImage assigned.");
-
-        // Create a display object for the hover image
+        // Create a UI object for displaying the sprite
         displayObject = new GameObject("HoverDisplay", typeof(RectTransform));
         displayObject.transform.SetParent(displayParent, false);
-
-        Debug.Log("HoverDisplay GameObject created and parented.");
-
-        // Add Image component and assign the item's image
         displayImage = displayObject.AddComponent<Image>();
-        displayImage.sprite = shopItem.itemImage;
 
-        Debug.Log($"HoverDisplay Image component assigned with {shopItem.itemImage.name}.");
-
-        // Set initial position and hide the display object
+        // Position & hide at first
         RectTransform rt = displayObject.GetComponent<RectTransform>();
         rt.anchoredPosition = offset;
+        displayObject.SetActive(false);
 
-        Debug.Log($"HoverDisplay anchored position set to {offset}.");
-
-        displayObject.SetActive(false); // Start hidden
-        Debug.Log("HoverDisplay initially set to inactive.");
-
-        // Assign the button callback for purchasing the item
+        // If you have a button for manual purchase
         if (purchaseButton != null)
         {
             purchaseButton.onClick.AddListener(PurchaseItem);
-            Debug.Log("PurchaseButton callback assigned.");
         }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (isPurchased)
+        // If not purchased, show the image on hover
+        if (!isPurchased)
         {
-            Debug.Log("Pointer enter ignored because the item is already purchased.");
-            return; // Ignore hover if the item is purchased
-        }
-
-        Debug.Log("Pointer entered UI element.");
-        if (displayObject != null)
-        {
-            displayObject.SetActive(true); // Show the image
-            Debug.Log("HoverDisplay GameObject set to active.");
+            displayObject.SetActive(true);
         }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (isPurchased)
+        // Hide again if not purchased
+        if (!isPurchased)
         {
-            Debug.Log("Pointer exit ignored because the item is already purchased.");
-            return; // Ignore hover if the item is purchased
-        }
-
-        Debug.Log("Pointer exited UI element.");
-        if (displayObject != null)
-        {
-            displayObject.SetActive(false); // Hide the image
-            Debug.Log("HoverDisplay GameObject set to inactive.");
+            displayObject.SetActive(false);
         }
     }
 
+    // If you allow manual purchases
     private void PurchaseItem()
     {
-        if (isPurchased)
-        {
-            Debug.LogWarning("PurchaseItem called but the item is already purchased.");
-            return; // Prevent multiple purchases
-        }
+        if (isPurchased) return;
+        isPurchased = true;
 
-        isPurchased = true; // Mark the item as purchased
-        Debug.Log($"Item '{shopItem.title}' purchased!");
-
-        if (displayObject != null)
-        {
-            displayObject.SetActive(true); // Ensure the image is visible after purchase
-            Debug.Log("HoverDisplay GameObject set to active permanently.");
-        }
-
+        // Show permanently
+        displayObject.SetActive(true);
         if (purchaseButton != null)
         {
-            purchaseButton.interactable = false; // Disable the button
-            Debug.Log("PurchaseButton disabled to prevent repurchase.");
+            purchaseButton.interactable = false;
         }
     }
+
+    // Called by Gacha to "win" this item
+    public void GrantItemFromGacha()
+    {
+        if (isPurchased) return;
+        isPurchased = true;
+
+        displayObject.SetActive(true);
+        if (purchaseButton != null)
+        {
+            purchaseButton.interactable = false;
+        }
+    }
+
+    // ===========================
+    //  NEW: Methods to switch
+    // ===========================
+  public void SwitchToFrontView()
+{
+    if (displayImage != null && frontSprite != null)
+    {
+        displayImage.sprite = frontSprite;
+    }
+
+    if (isPurchased)
+    {
+        displayObject.SetActive(true);
+    }
+    else
+    {
+        // DO NOT force displayObject.SetActive(false)
+        // Let OnPointerEnter/OnPointerExit handle it
+    }
+}
+
+
+   public void SwitchToBirdsEyeView()
+{
+    if (displayImage != null && birdsEyeSprite != null)
+    {
+        displayImage.sprite = birdsEyeSprite;
+    }
+
+    // If purchased, keep it visible. Otherwise, keep it hidden until hovered.
+    if (isPurchased)
+    {
+        displayObject.SetActive(true);
+    }
+    else
+    {
+        // DO NOT forcibly hide. Leave it to OnPointerEnter/Exit.
+        // displayObject.SetActive(false); // Remove this line
+    }
+}
+
 }
