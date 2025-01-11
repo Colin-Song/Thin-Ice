@@ -60,6 +60,9 @@ TagManager:
   - name: OpenObject
     uniqueID: 1356101841
     locked: 0
+  - name: AorR Button
+    uniqueID: 3626987715
+    locked: 0
   - name: Hand
     uniqueID: 823234329
     locked: 0
