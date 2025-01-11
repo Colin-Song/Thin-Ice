@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Hand
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Wall
+    uniqueID: 2712107177
+    locked: 0
+  - name: Desk
+    uniqueID: 2035453523
+    locked: 0
+  - name: Clipboard
+    uniqueID: 437137527
+    locked: 0
+  - name: ID
+    uniqueID: 183049279
+    locked: 0
+  - name: Flash
+    uniqueID: 497982547
+    locked: 0
+  - name: OpenObject
+    uniqueID: 1356101841
+    locked: 0
+  - name: Hand
+    uniqueID: 823234329
+    locked: 0
+  m_RenderingLayers:
+  - Default
