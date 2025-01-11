@@ -24,7 +24,7 @@ public class CharacterSpawn : MonoBehaviour
 
         if (CharacterInfo.AorR == 'a' || CharacterInfo.AorR == 'r')
         {
-            if (character.GetComponent<RectTransform>().anchoredPosition.x <= -11.8f || character.GetComponent<RectTransform>().anchoredPosition.x >= 11.8f)
+            if (CharacterInfo.charDelete)
             {
                 CharGone();
                 BoothGlobalObjects.CharOnScreen = false;

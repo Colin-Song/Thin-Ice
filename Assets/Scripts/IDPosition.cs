@@ -36,7 +36,7 @@ public class IDPosition : MonoBehaviour
         {
             BoothGlobalObjects.IsIDWall = true;
         }
-        else if (other.gameObject.name == "Above Desk")
+        else if (other.gameObject.name == "Above Desk" && !BoothGlobalObjects.IsIDOpen)
         {
             BoothGlobalObjects.IsIDAbove = true;
         }
@@ -51,7 +51,7 @@ public class IDPosition : MonoBehaviour
         {
             BoothGlobalObjects.IsIDWall = true;
         }
-        else if (other.gameObject.name == "Above Desk")
+        else if (other.gameObject.name == "Above Desk" && !BoothGlobalObjects.IsIDOpen)
         {
             BoothGlobalObjects.IsIDAbove = true;
         }
@@ -66,7 +66,7 @@ public class IDPosition : MonoBehaviour
         {
             BoothGlobalObjects.IsIDWall = false;
         }
-        else if (other.gameObject.name == "Above Desk")
+        else if (other.gameObject.name == "Above Desk" && !BoothGlobalObjects.IsIDOpen)
         {
             BoothGlobalObjects.IsIDAbove = false;
         }

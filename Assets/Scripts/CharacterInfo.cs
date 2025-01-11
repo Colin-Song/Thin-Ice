@@ -5,9 +5,9 @@ public class CharacterInfo : MonoBehaviour
     public static string type, allergies;
     public static char gender, AorR;
     public static int age, height;
-    public static bool killer, tattoo;
+    public static bool killer, tattoo, charDelete;
 
-    private bool prewalk, middle, afterwalk;
+    private bool prewalk, middle, afterwalkr, afterwalkl;
     
     void Start()
     {
@@ -28,8 +28,10 @@ public class CharacterInfo : MonoBehaviour
 
         prewalk = true;
         middle = false;
-        afterwalk = false;
+        afterwalkr = false;
+        afterwalkl = false;
         AorR = 'n';
+        charDelete = false;
     }
 
     void Update()
@@ -48,21 +50,31 @@ public class CharacterInfo : MonoBehaviour
         }
         else if (middle)
         {
-            if (AorR == 'a' || AorR == 'r')
+            if (AorR == 'a')
             {
                 middle = false;
-                afterwalk = true;
+                afterwalkr = true;
+            }
+            else if (AorR == 'r')
+            {
+                middle = false;
+                afterwalkl = true;
             }
         }
-        else if (afterwalk)
+        else if (afterwalkr || afterwalkl)
         {
-            if (AorR == 'a')
+            if (afterwalkr)
             {
                 transform.position = new Vector3(transform.position.x + 0.2f, transform.position.y, transform.position.z);
             }
             else
             {
                 transform.position = new Vector3(transform.position.x - 0.2f, transform.position.y, transform.position.z);
+            }
+
+            if (transform.position.x <= -11.8f || transform.position.x >= 11.8f)
+            {
+                charDelete = true;
             }
         }
     }

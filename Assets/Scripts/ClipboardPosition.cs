@@ -36,7 +36,7 @@ public class ClipboardPosition : MonoBehaviour
         {
             BoothGlobalObjects.IsClipboardWall = true;
         }
-        else if (other.gameObject.name == "Above Desk")
+        else if (other.gameObject.name == "Above Desk" && !BoothGlobalObjects.IsClipboardOpen)
         {
             BoothGlobalObjects.IsClipboardAbove = true;
         }
@@ -51,7 +51,7 @@ public class ClipboardPosition : MonoBehaviour
         {
             BoothGlobalObjects.IsClipboardWall = true;
         }
-        else if (other.gameObject.name == "Above Desk")
+        else if (other.gameObject.name == "Above Desk" && !BoothGlobalObjects.IsClipboardOpen)
         {
             BoothGlobalObjects.IsClipboardAbove = true;
         }
@@ -66,7 +66,7 @@ public class ClipboardPosition : MonoBehaviour
         {
             BoothGlobalObjects.IsClipboardWall = false;
         }
-        else if (other.gameObject.name == "Above Desk")
+        else if (other.gameObject.name == "Above Desk" && !BoothGlobalObjects.IsClipboardOpen)
         {
             BoothGlobalObjects.IsClipboardAbove = false;
         }
