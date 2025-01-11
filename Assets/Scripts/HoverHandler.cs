@@ -7,9 +7,11 @@ public class HoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public ShopItemSO shopItem;    // Reference to the ScriptableObject
     public RectTransform displayParent; // Parent for the hover display image
     public Vector2 offset;         // Offset position for the hover display
+    public Button purchaseButton;  // Button to purchase the item
 
     private GameObject displayObject;
     private Image displayImage;
+    private bool isPurchased = false; // Flag to track if the item has been purchased
 
     private void Start()
     {
@@ -49,35 +51,68 @@ public class HoverHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
         displayObject.SetActive(false); // Start hidden
         Debug.Log("HoverDisplay initially set to inactive.");
+
+        // Assign the button callback for purchasing the item
+        if (purchaseButton != null)
+        {
+            purchaseButton.onClick.AddListener(PurchaseItem);
+            Debug.Log("PurchaseButton callback assigned.");
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("Pointer entered UI element.");
+        if (isPurchased)
+        {
+            Debug.Log("Pointer enter ignored because the item is already purchased.");
+            return; // Ignore hover if the item is purchased
+        }
 
+        Debug.Log("Pointer entered UI element.");
         if (displayObject != null)
         {
             displayObject.SetActive(true); // Show the image
             Debug.Log("HoverDisplay GameObject set to active.");
         }
-        else
-        {
-            Debug.LogWarning("HoverDisplay GameObject is null when trying to activate.");
-        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("Pointer exited UI element.");
+        if (isPurchased)
+        {
+            Debug.Log("Pointer exit ignored because the item is already purchased.");
+            return; // Ignore hover if the item is purchased
+        }
 
+        Debug.Log("Pointer exited UI element.");
         if (displayObject != null)
         {
             displayObject.SetActive(false); // Hide the image
             Debug.Log("HoverDisplay GameObject set to inactive.");
         }
-        else
+    }
+
+    private void PurchaseItem()
+    {
+        if (isPurchased)
         {
-            Debug.LogWarning("HoverDisplay GameObject is null when trying to deactivate.");
+            Debug.LogWarning("PurchaseItem called but the item is already purchased.");
+            return; // Prevent multiple purchases
+        }
+
+        isPurchased = true; // Mark the item as purchased
+        Debug.Log($"Item '{shopItem.title}' purchased!");
+
+        if (displayObject != null)
+        {
+            displayObject.SetActive(true); // Ensure the image is visible after purchase
+            Debug.Log("HoverDisplay GameObject set to active permanently.");
+        }
+
+        if (purchaseButton != null)
+        {
+            purchaseButton.interactable = false; // Disable the button
+            Debug.Log("PurchaseButton disabled to prevent repurchase.");
         }
     }
 }

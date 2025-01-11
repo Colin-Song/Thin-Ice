@@ -260,6 +260,10 @@ PrefabInstance:
       propertyPath: displayParent
       value: 
       objectReference: {fileID: 498873016}
+    - target: {fileID: 6334835493768843867, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: purchaseButton
+      value: 
+      objectReference: {fileID: 1215837223}
     - target: {fileID: 6924350018387661123, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
@@ -807,6 +811,10 @@ PrefabInstance:
       propertyPath: displayParent
       value: 
       objectReference: {fileID: 1790208030}
+    - target: {fileID: 6334835493768843867, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: purchaseButton
+      value: 
+      objectReference: {fileID: 240935670}
     - target: {fileID: 6924350018387661123, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
@@ -3648,6 +3656,10 @@ PrefabInstance:
       propertyPath: displayParent
       value: 
       objectReference: {fileID: 1049714565}
+    - target: {fileID: 6334835493768843867, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: purchaseButton
+      value: 
+      objectReference: {fileID: 941961892}
     - target: {fileID: 6924350018387661123, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
@@ -4025,6 +4037,10 @@ PrefabInstance:
       propertyPath: displayParent
       value: 
       objectReference: {fileID: 1475759870}
+    - target: {fileID: 6334835493768843867, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: purchaseButton
+      value: 
+      objectReference: {fileID: 1053625904}
     - target: {fileID: 6924350018387661123, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
