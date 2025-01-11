@@ -7,7 +7,8 @@ public class TimeManager : MonoBehaviour
 {
     [Header("Time Settings")]
     [Tooltip("Real-world seconds for 8 AM → 8 PM (12-hour in-game day).")]
-    public float realSecondsPerGameDay = 30f; // 30 seconds for demonstration
+    // <-- Changed the default to 30 seconds
+    public float realSecondsPerGameDay = 30f;
 
     // 12 in-game hours (8 AM to 8 PM) = 720 minutes
     private float minutesPerDay = 720f;
@@ -18,137 +19,190 @@ public class TimeManager : MonoBehaviour
     private int minute; // We'll track minutes internally, but won't display them
 
     [Header("UI References")]
-    public TextMeshProUGUI timeDisplay;
-    public GameObject dayEndPanel;   
-    public Button nextDayButton;  
-        
-    // >>>  NEW: Add a reference to the IrisOutOverlay <<<
-    [Header("Iris Out Overlay")]
-    public RectTransform irisOutOverlay;   // The circular overlay's RectTransform
-    public float irisOutDuration = 1.5f;   // Seconds to animate the iris out
-    public float irisMaxScale = 5f;        // How large we scale the overlay to cover the screen
+    public TextMeshProUGUI timeDisplay;     // Reference to the UI TextMeshPro (for time)
+    public RectTransform summaryContainer;  // Container for end-of-day summary lines
+    public GameObject summaryLinePrefab;    // Prefab for each line in the summary
+    public GameObject dayEndPanel;          // Panel shown at the end of each day
+    public Button nextDayButton;            // Button to start the next day
 
-    // Internal tracking
+    // Internal: how many in-game minutes have passed in the current day
     private float currentDayTimeInMinutes;
+
+    // When the day ends (8:00 PM), we pause time until the user clicks the "Next Day" button
     private bool isDayEnded = false;
+
+    private Animator _animator;
+
+    public string[] dailySummaryLines = new string[5]
+    {
+        "You collected 10 coins.",
+        "You defeated 2 enemies.",
+        "You gained 50 XP.",
+        "You found 1 rare item.",
+        "End of Day results complete."
+    };
 
     private void Start()
     {
-        // Start day at 8:00 AM
+        _animator = GameObject.Find("IrisOut").GetComponent<Animator>();
+        // Start on Day 1 at 8:00 AM
         day = 1;
         hour = 8;
         minute = 0;
+        
+        // 8:00 AM corresponds to 0 "day minutes" in our system
         currentDayTimeInMinutes = 0f;
 
-        // Hide or disable the dayEndPanel at the start
-        if (dayEndPanel != null)
+        // Hide the end-of-day panel at the start
+        if (dayEndPanel != null) 
             dayEndPanel.SetActive(false);
 
-        // Hook up the Next Day button
+        // Hook up the "Next Day" button if assigned
         if (nextDayButton != null)
             nextDayButton.onClick.AddListener(StartNextDay);
 
-        // Ensure the overlay is invisible or scaled to 0 at start
-        if (irisOutOverlay != null)
-        {
-            irisOutOverlay.gameObject.SetActive(false);    // or keep active but set localScale to zero
-            irisOutOverlay.localScale = Vector3.zero;
-        }
+        IrisOut();
     }
 
     private void Update()
     {
+        // If the day has ended, stop updating time until "Next Day" is clicked
         if (isDayEnded) return;
 
-        // Advance current day time
+        // Convert real-time seconds to in-game minutes
+        // 30 real seconds => 720 in-game minutes
         float inGameMinutesPerRealSecond = minutesPerDay / realSecondsPerGameDay;
+
+        // Advance current in-game time
         currentDayTimeInMinutes += Time.deltaTime * inGameMinutesPerRealSecond;
 
-        // End the day if we exceed 720 in-game minutes
+        // If we exceed 720 in-game minutes, we've passed 8:00 PM
         if (currentDayTimeInMinutes >= minutesPerDay)
         {
             isDayEnded = true;
-            // Start the iris-out animation BEFORE showing the day end panel
-            StartCoroutine(IrisOutThenEndDay());
+            // Show the "Day End" panel
+            timeDisplay.gameObject.SetActive(false);
+           
+            IrisIn();
+            IrisOut();
+            StartCoroutine(activatePanel());
         }
 
-        // Convert to hour/minute for 8 AM → 8 PM
+        // Calculate total minutes since 8 AM
         float totalMinutesSince8AM = Mathf.Min(currentDayTimeInMinutes, minutesPerDay);
-        float absoluteMinutesOfDay = (8f * 60f) + totalMinutesSince8AM;
+        float absoluteMinutesOfDay = (8f * 60f) + totalMinutesSince8AM; 
+        // 8 AM => 480 minutes into a normal 24-hr cycle
 
-        hour = (int)(absoluteMinutesOfDay / 60f) % 24;
-        minute = (int)(absoluteMinutesOfDay % 60);
+        // Convert to hour/minute
+        hour   = (int)(absoluteMinutesOfDay / 60f) % 24;
+        minute = (int)(absoluteMinutesOfDay % 60);  
 
-        // Update text (display hour in AM/PM without minutes)
+        // Update the UI text (without minutes, as requested)
         if (timeDisplay != null)
         {
-            bool isAM = (hour < 12);
+            // Convert 24-hour to 12-hour format
+            bool isAM       = (hour < 12);
             int displayHour = hour % 12;
-            if (displayHour == 0) displayHour = 12;
+            if (displayHour == 0) displayHour = 12; // 12-hour clock "0" => "12"
 
             string amPmLabel = isAM ? "AM" : "PM";
             timeDisplay.text = $"Day {day} - {displayHour} {amPmLabel}";
         }
     }
 
-    // ------------------------------------------------
-    // Coroutine: Play Iris Out animation, then show panel
-    // ------------------------------------------------
-    private IEnumerator IrisOutThenEndDay()
-    {
-        // Activate overlay
-        if (irisOutOverlay != null)
-        {
-            irisOutOverlay.gameObject.SetActive(true);
-
-            // Reset scale to 0 if it isn't already
-            irisOutOverlay.localScale = Vector3.zero;
-
-            float timer = 0f;
-            while (timer < irisOutDuration)
-            {
-                timer += Time.deltaTime;
-                float t = Mathf.Clamp01(timer / irisOutDuration);
-                
-                // Scale from 0 to irisMaxScale
-                float scaleValue = Mathf.Lerp(0f, irisMaxScale, t);
-                irisOutOverlay.localScale = new Vector3(scaleValue, scaleValue, 1f);
-
-                yield return null;
-            }
-        }
-
-        // After the iris out is complete, show the day-end panel
-        if (dayEndPanel != null)
-        {
-            dayEndPanel.SetActive(true);
-        }
-    }
-
     /// <summary>
-    /// Called by the "Next Day" button.
-    /// Resets time for the new day (8 AM → 8 PM), hides the overlay, hides the panel, and resumes time.
+    /// Called by the "Next Day" button. 
+    /// Resets time for the new day (8 AM → 8 PM), hides the panel, and resumes time.
     /// </summary>
     public void StartNextDay()
     {
+        // Increment day counter
         day++;
 
-        // Reset day to 8:00 AM
+        // Reset to 8:00 AM
         hour = 8;
         minute = 0;
-        currentDayTimeInMinutes = 0f;
-
-        // Hide panel
-        if (dayEndPanel != null)
-            dayEndPanel.SetActive(false);
-
-        // Reset and hide iris overlay
-        if (irisOutOverlay != null)
-        {
-            irisOutOverlay.localScale = Vector3.zero;
-            irisOutOverlay.gameObject.SetActive(false);
-        }
-
+        currentDayTimeInMinutes = 0f; 
+        timeDisplay.gameObject.SetActive(true);
+        
+        // Hide the "Day End" panel
+        IrisIn();
+        IrisOut();
+        StartCoroutine(deactivatePanel());
         isDayEnded = false;
     }
+
+    private IEnumerator activatePanel()
+    {
+        yield return new WaitForSeconds(1f);
+        dayEndPanel.SetActive(true);
+        ShowDayEndSummary();
+    }
+
+    private IEnumerator deactivatePanel()
+    {
+        yield return new WaitForSeconds(1f);
+        dayEndPanel.SetActive(false);
+    }
+
+    public void IrisOut()
+    {
+        _animator.SetTrigger("Out");
+    }
+
+    public void IrisIn()
+    {
+        _animator.SetTrigger("In");
+    }
+
+    private void ShowDayEndSummary()
+    {
+        if (dayEndPanel != null)
+        {
+            
+
+            // Clear any existing summary lines in the container
+            foreach (Transform child in summaryContainer)
+            {
+                if (child.name == "nextDayButton") continue;
+                Destroy(child.gameObject);
+            }
+            dayEndPanel.SetActive(true);
+            // Start displaying the summary lines
+            StartCoroutine(DisplaySummaryLines());
+        }
+    }
+
+    private IEnumerator DisplaySummaryLines()
+    {
+        for (int i = 0; i < dailySummaryLines.Length; i++)
+        {
+            // Instantiate the prefab for each line
+            GameObject newLine = Instantiate(summaryLinePrefab, summaryContainer);
+
+            
+
+            // Update the text of the new line
+            TextMeshProUGUI textComponent = newLine.GetComponentInChildren<TextMeshProUGUI>();
+            if (textComponent != null)
+            {
+                textComponent.text = dailySummaryLines[i];
+            }
+
+            // Optional: Customize the image background if needed
+            Image backgroundImage = newLine.GetComponent<Image>();
+            if (backgroundImage != null)
+            {
+                // Example: Change the sprite/color dynamically if desired
+                // backgroundImage.sprite = someCustomSprite;
+                // backgroundImage.color = new Color(1, 1, 1, 0.5f); // Semi-transparent white
+            }
+
+            // Wait before displaying the next line
+            yield return new WaitForSeconds(1f);
+
+            newLine.SetActive(true);
+        }
+    }
+
 }
