@@ -15,3 +15,4 @@ MonoBehaviour:
   title: Bird Feeder
   description: So birds are not hungry
   baseCost: 10
+  itemImage: {fileID: 7482667652216324306, guid: bfff40695b9d86d4d8e2b1545d7ecdf7, type: 3}
