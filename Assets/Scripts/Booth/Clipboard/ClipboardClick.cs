@@ -16,7 +16,7 @@ public class ClipboardClick : MonoBehaviour
 
     private void Update()
     {
-        if (CharacterInfo.AorR == 'n')
+        if (BoothGlobalObjects.AorR == 'n')
         {
             if (!BoothGlobalObjects.IsIDDragging && !BoothGlobalObjects.IsIDOpen && !BoothGlobalObjects.IsFlashlightHolding)
             {

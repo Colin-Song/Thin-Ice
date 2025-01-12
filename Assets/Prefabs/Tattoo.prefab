@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8243047221971384015}
   - component: {fileID: 9011112257586977136}
+  - component: {fileID: 3895016914082121167}
+  - component: {fileID: 2106573303365220451}
   m_Layer: 0
   m_Name: Tattoo
   m_TagString: Untagged
@@ -87,3 +89,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3895016914082121167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2535623857158982528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72482ac4907a72c449a1bb99d48d24a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2106573303365220451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2535623857158982528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad06d1eb4751dae4eb72e55b92c1643f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -11,5 +11,9 @@ public class BoothGlobalObjects : MonoBehaviour
     public static bool IsFlashlightHolding = false, IsFlashlightOn = false, IsFlashlightWall = false, IsFlashlightAbove = false;
     public static float Flashlightposx, Flashlightposy;
 
-    public static bool UVOn = false, CharOnScreen = false;
+    public static bool UVOn = false, CharOnScreen = false, TattooOn = false;
+
+    public static char AorR = 'n';
+    public static bool charDelete = false;
+    public static bool prewalk, middle, afterwalkr, afterwalkl;
 }
