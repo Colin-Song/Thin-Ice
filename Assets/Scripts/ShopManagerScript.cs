@@ -53,7 +53,7 @@ public class ShopManagerScript : MonoBehaviour
         coinUI.text = "Coins: " + coins.ToString();
         coinUI1.text = "Coins: " + coins.ToString();
         LoadPanels();
-        CheckPurchaseable();
+        //CheckPurchaseable();
 
         if (coinUI1 == null)
     {
@@ -69,17 +69,32 @@ public class ShopManagerScript : MonoBehaviour
     {
     }
 
-    public void OpenGachaWindow()
+ public void OpenGachaWindow()
+{
+    // Reset the reward text and image
+    if (rewardText != null)
     {
-        // Show the gacha window
-        gachaPopup.SetActive(true);
-        openGatchaButton.gameObject.SetActive(false);
+        rewardText.text = string.Empty; // Clear the reward text
+        rewardText.gameObject.SetActive(false); // Hide the reward text
     }
+    if (rewardImage != null)
+    {
+        rewardImage.sprite = null; // Remove the reward image
+        rewardImage.gameObject.SetActive(false); // Hide the reward image
+    }
+
+    // Show the Gacha window
+    gachaPopup.SetActive(true);
+    openGatchaButton.gameObject.SetActive(false);
+    toggleCanvasButton.gameObject.SetActive(false);
+}
+
 
     public void CloseGachaWindow()
 {
     gachaPopup.SetActive(false); // Hide the Gacha window
     openGatchaButton.gameObject.SetActive(true); // Show the Open Gacha button
+    toggleCanvasButton.gameObject.SetActive(true);
     isGachaActive = false; // Reset Gacha active state
 }
 
@@ -88,10 +103,10 @@ public class ShopManagerScript : MonoBehaviour
         coins++;
         coinUI.text = "Coins: " + coins.ToString();
         coinUI1.text = "Coins: " + coins.ToString();
-        CheckPurchaseable(); 
+       // CheckPurchaseable(); 
     }
 
-    public void CheckPurchaseable(){
+   /* public void CheckPurchaseable(){
         for(int i = 0; i < shopItemsSO.Length; i++) {
             if (coins >= shopItemsSO[i].baseCost){
                 myPurchaseBtns[i].interactable = true;
@@ -99,9 +114,9 @@ public class ShopManagerScript : MonoBehaviour
                 myPurchaseBtns[i].interactable = false; 
             }
         }
-    }
+    }*/
 
-    public void PurchaseItem(int btnNo){
+ /*   public void PurchaseItem(int btnNo){
         Debug.Log(btnNo);
         Debug.Log(shopItemsSO.Length); 
         if (coins >= shopItemsSO[btnNo].baseCost){
@@ -110,13 +125,14 @@ public class ShopManagerScript : MonoBehaviour
             coinUI1.text = "Coins: " + coins.ToString();
             CheckPurchaseable(); 
         }
-    }
+    }*/
 
    public void LoadPanels() {
     for (int i = 0; i < shopItemsSO.Length; i++) { 
+        Debug.Log($"Setting panel {i} with item {shopItemsSO[i].title}");
         shopPanels[i].titleTxt.text = shopItemsSO[i].title;
-        shopPanels[i].descriptionTxt.text = shopItemsSO[i].description;
-        shopPanels[i].costTxt.text = "Coins: " + shopItemsSO[i].baseCost.ToString(); 
+        //shopPanels[i].descriptionTxt.text = shopItemsSO[i].description;
+        //shopPanels[i].costTxt.text = "Coins: " + shopItemsSO[i].baseCost.ToString(); 
     }
 }
 
@@ -140,7 +156,7 @@ public void StartGacha()
     coins -= gachaCost;
     coinUI.text = "Coins: " + coins.ToString();
     coinUI1.text = "Coins: " + coins.ToString();
-    CheckPurchaseable();
+   // CheckPurchaseable();
 
     Debug.Log("Gacha spin started.");
     gachaPopup.SetActive(true); // Open the popup immediately, even if reward is hidden.
@@ -200,8 +216,8 @@ public void OnGachaAnimationComplete()
         rewardText.text = $"You received: {shopItemsSO[rewardIndex].title}";
 
         // Disable the item’s purchase button if you still use it
-        myPurchaseBtns[rewardIndex].interactable = false;
-        myPurchaseBtns[rewardIndex].GetComponentInChildren<TMP_Text>().text = "Purchased";
+      //  myPurchaseBtns[rewardIndex].interactable = false;
+      //  myPurchaseBtns[rewardIndex].GetComponentInChildren<TMP_Text>().text = "Purchased";
 
         // ======================
         //      NEW CODE
@@ -263,6 +279,7 @@ public void CloseInsufficientFundsPopup()
     {
         gachaPopup.SetActive(false);
         openGatchaButton.gameObject.SetActive(true);
+        toggleCanvasButton.gameObject.SetActive(true);
         //postProcessVolume.SetActive(false);
     }
 
