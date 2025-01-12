@@ -78,6 +78,9 @@ TagManager:
   - name: OpenObject
     uniqueID: 1356101841
     locked: 0
+  - name: Prop
+    uniqueID: 293498151
+    locked: 0
   - name: AorR Button
     uniqueID: 3626987715
     locked: 0

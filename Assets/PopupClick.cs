@@ -18,7 +18,6 @@ public class PopupClick : MonoBehaviour
             Collider2D popupCollider = GetComponent<Collider2D>();
             if (handCollider.bounds.Intersects(popupCollider.bounds))
             {
-                
                 LostFoundClick.popupdestroy = true;
             }
         }
