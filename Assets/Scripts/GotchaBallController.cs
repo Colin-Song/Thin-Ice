@@ -36,10 +36,13 @@ public class OrnamentController : MonoBehaviour
     public TMP_Text coinDisplay;
     public TMP_Text warningText;
 
+    private int moneyCount;
+
     void Start()
     {
+        moneyCount = GlobalObjects.Instance.money;
         // Initialize current rotation speed
-        coinDisplay.text = "Coins: " + GlobalObjects.money.ToString();
+        coinDisplay.text = "Coins: " + moneyCount.ToString();
 
         // Assign the SpeedUpRotation function to the speedUpButton's onClick event
         if (spinButton != null)
@@ -89,7 +92,7 @@ public class OrnamentController : MonoBehaviour
     public void SpeedUpRotation()
     {
         Debug.Log("spin.");
-        if (GlobalObjects.money > 0)
+        if (GlobalObjects.Instance.money > 0)
         {
             warningText.text = "Not enough coins!";
             warningText.gameObject.SetActive(true);
@@ -97,7 +100,7 @@ public class OrnamentController : MonoBehaviour
         }
         else {
             rotationSpeed += speedIncrement;
-            GlobalObjects.money -= 15;
+            GlobalObjects.Instance.money -= 15;
             Debug.Log("Ornament rotation speed increased to: " + rotationSpeed + " degrees/sec.");
             StartCoroutine(SwitchSceneAfterDelay());
         }

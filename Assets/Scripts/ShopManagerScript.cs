@@ -1,14 +1,15 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class ShopManagerScript : MonoBehaviour
 {
-    public static bool ifSpinSuccessful = false;    
     public int coins;
     public TMP_Text coinUI;
 
+    public static bool ifSpinSuccessful = false;
     public TMP_Text coinUI1;
     public ShopItemSO[] shopItemsSO;
     public GameObject[] shopPanelsGO;
@@ -48,17 +49,21 @@ public class ShopManagerScript : MonoBehaviour
 
     void Start()
     {
-        purchasedItems = new bool[shopItemsSO.Length]; // Initialize purchased items tracking
 
-        for (int i = 0; i < shopItemsSO.Length; i++)
-        {
-            shopPanelsGO[i].SetActive(true);
-        }
+        // purchasedItems = new bool[shopItemsSO.Length]; // Initialize purchased items tracking
+
+        // for (int i = 0; i < shopItemsSO.Length; i++)
+        // {
+        //     shopPanelsGO[i].SetActive(true);
+        // }
+        ConvertDictionaryToArray_ForLoop(GlobalObjects.Instance.objectsInScene, shopItemsSO, out purchasedItems);
+        Debug.Log("Converted dictionary to array.");
 
         coinUI.text = "Coins: " + coins.ToString();
         coinUI1.text = "Coins: " + coins.ToString();
         LoadPanels();
         //CheckPurchaseable();
+       
 
         if (coinUI1 == null)
     {
@@ -72,44 +77,55 @@ public class ShopManagerScript : MonoBehaviour
 
     void Update()
     {
-        if (ifSpinSuccessful)
-        {
+        if (ifSpinSuccessful){
+            for (int i=0; i < hoverHandlers.Length; i++){
+                string titleStr = hoverHandlers[i].shopItem.title;
+                if (GlobalObjects.Instance.objectsInScene[titleStr]){
+                    hoverHandlers[i].GrantItemFromGacha();
+                }
+            }
             ifSpinSuccessful = false;
             OnGachaAnimationComplete();
         }
     }
 
- public void OpenGachaWindow()
-{
-    // // Reset the reward text and image
-    // if (rewardText != null)
-    // {
-    //     rewardText.text = string.Empty; // Clear the reward text
-    //     rewardText.gameObject.SetActive(false); // Hide the reward text
-    // }
-    // if (rewardImage != null)
-    // {
-    //     rewardImage.sprite = null; // Remove the reward image
-    //     rewardImage.gameObject.SetActive(false); // Hide the reward image
-    // }
+    void ConvertDictionaryToArray_ForLoop(Dictionary<string, bool> dict, ShopItemSO[] keys, out bool[] valuesArray)
+    {
+        // Initialize the array with the same count as the list
+        valuesArray = new bool[keys.Length];
 
-    // // Show the Gacha window
-    // gachaPopup.SetActive(true);
-    // openGatchaButton.gameObject.SetActive(false);
-    // toggleCanvasButton.gameObject.SetActive(false);
+        for (int i = 0; i < keys.Length; i++)
+        {
+            string key = keys[i].title;
 
-    SceneManager.LoadScene("GotchaBall");
+            // Attempt to get the value from the dictionary
+            if (dict.TryGetValue(key, out bool value))
+            {
+                valuesArray[i] = value;
+                Debug.Log($"Key '{key}' found in the dictionary. Value: {value}");
+            }
+            else
+            {
+                // Handle missing keys as needed
+                valuesArray[i] = false; // Default value
+            }
+        }
+    }
 
-}
+
+    public void OpenGachaWindow()
+    {
+        SceneManager.LoadScene("GotchaBall");
+    }
 
 
-    public void CloseGachaWindow()
-{
-    gachaPopup.SetActive(false); // Hide the Gacha window
-    openGatchaButton.gameObject.SetActive(true); // Show the Open Gacha button
-    toggleCanvasButton.gameObject.SetActive(true);
-    isGachaActive = false; // Reset Gacha active state
-}
+        public void CloseGachaWindow()
+    {
+        gachaPopup.SetActive(false); // Hide the Gacha window
+        openGatchaButton.gameObject.SetActive(true); // Show the Open Gacha button
+        toggleCanvasButton.gameObject.SetActive(true);
+        isGachaActive = false; // Reset Gacha active state
+    }
 
       public void AddCoins()
     {
@@ -218,6 +234,7 @@ public void OnGachaAnimationComplete()
 
     if (rewardIndex == -1)
     {
+        
         // If no valid item is found, fallback behavior
         rewardText.text = "No reward selected!";
         rewardImage.sprite = null;
@@ -225,8 +242,14 @@ public void OnGachaAnimationComplete()
     }
     else
     {
-        // Update reward UI for newly received items
         purchasedItems[rewardIndex] = true;
+        string itemName = shopItemsSO[rewardIndex].title;
+        if (GlobalObjects.Instance.objectsInScene.ContainsKey(itemName))
+        {
+            GlobalObjects.Instance.objectsInScene[itemName] = true;
+        }
+        
+
         rewardImage.sprite = shopItemsSO[rewardIndex].itemImage;
         rewardText.text = $"You received: {shopItemsSO[rewardIndex].title}";
 
