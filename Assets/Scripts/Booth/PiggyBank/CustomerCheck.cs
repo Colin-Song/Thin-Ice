@@ -28,6 +28,7 @@ public class CustomerCheck : MonoBehaviour
                 if (char1attributes.KILLER)
                 {
                     GlobalObjects.Instance.killerIn = true;
+                    SceneManager.LoadScene("MurderEnding");
                 }
                 else
                 {
@@ -41,6 +42,7 @@ public class CustomerCheck : MonoBehaviour
                 if (char2attributes.KILLER)
                 {
                     GlobalObjects.Instance.killerIn = true;
+                    SceneManager.LoadScene("MurderEnding");
                 }
                 else
                 {
@@ -54,6 +56,7 @@ public class CustomerCheck : MonoBehaviour
                 if (char3attributes.KILLER)
                 {
                     GlobalObjects.Instance.killerIn = true;
+                    SceneManager.LoadScene("MurderEnding");
                 }
                 else
                 {
@@ -81,6 +84,7 @@ public class CustomerCheck : MonoBehaviour
                 if (char5attributes.KILLER)
                 {
                     GlobalObjects.Instance.killerIn = true;
+                    SceneManager.LoadScene("MurderEnding");
                 }
                 else
                 {
@@ -103,7 +107,10 @@ public class CustomerCheck : MonoBehaviour
                 if (!char1attributes.KILLER)
                 {
                     GlobalObjects.Instance.X += 1;
-
+                    if (GlobalObjects.Instance.X >= 3)
+                    {
+                        SceneManager.LoadScene("RiotEnding");
+                    }
 
                 }
                 else
@@ -117,6 +124,10 @@ public class CustomerCheck : MonoBehaviour
                 if (!char2attributes.KILLER)
                 {
                     GlobalObjects.Instance.X += 1;
+                    if (GlobalObjects.Instance.X >= 3)
+                    {
+                        SceneManager.LoadScene("RiotEnding");
+                    }
                 }
                 else
                 {
@@ -129,6 +140,10 @@ public class CustomerCheck : MonoBehaviour
                 if (!char3attributes.KILLER)
                 {
                     GlobalObjects.Instance.X += 1;
+                    if (GlobalObjects.Instance.X >= 3)
+                    {
+                        SceneManager.LoadScene("RiotEnding");
+                    }
                 }
                 else
                 {
@@ -141,6 +156,10 @@ public class CustomerCheck : MonoBehaviour
                 if (!char4attributes.KILLER)
                 {
                     GlobalObjects.Instance.X += 1;
+                    if (GlobalObjects.Instance.X >= 3)
+                    {
+                        SceneManager.LoadScene("RiotEnding");
+                    }
                 }
                 else
                 {
@@ -153,6 +172,10 @@ public class CustomerCheck : MonoBehaviour
                 if (!char5attributes.KILLER)
                 {
                     GlobalObjects.Instance.X += 1;
+                    if (GlobalObjects.Instance.X >= 3)
+                    {
+                        SceneManager.LoadScene("RiotEnding");
+                    }
                 }
                 else
                 {

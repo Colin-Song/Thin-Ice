@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      grungy-gray-marble-textured-background_0: 6520482888466484497
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

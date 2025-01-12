@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      snowy_forest_path_02_4k_0: -8084161566819717381
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

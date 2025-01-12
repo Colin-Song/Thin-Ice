@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      marble-tile-texture_0: 1500177123486894810
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

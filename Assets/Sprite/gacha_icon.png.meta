@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gacha_icon_0: -2272094241064506694
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

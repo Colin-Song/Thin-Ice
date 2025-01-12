@@ -503,7 +503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df58f413f7ee149eda2d6c034d84d78c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  realSecondsPerGameDay: 5
+  realSecondsPerGameDay: 300
   day: 1
   timeDisplay: {fileID: 1922436496}
   summaryContainer: {fileID: 1676366172}

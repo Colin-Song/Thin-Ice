@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      birds_eye_view_icon_0: -6077813151094938006
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

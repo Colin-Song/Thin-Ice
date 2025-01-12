@@ -1,6 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEditor.Progress;
+
 
 public class ClipboardClick : MonoBehaviour
 {
@@ -17,7 +17,8 @@ public class ClipboardClick : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         hand = GameObject.Find("Hand");
         bigScale = new Vector3(0.52f, 0.52f, 1f);
-        smallScale = new Vector3(0.34f, 0.4348247f, 1f);    }
+        smallScale = new Vector3(0.34f, 0.4348247f, 1f);    
+    }
 
     private void Update()
     {

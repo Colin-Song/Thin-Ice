@@ -3,10 +3,8 @@ using System.Linq;
 using NUnit.Framework.Constraints;
 using TMPro;
 using Unity.VisualScripting;
-using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UIElements;
-using static UnityEditor.PlayerSettings;
 
 public class LostFoundClick : MonoBehaviour
 {
