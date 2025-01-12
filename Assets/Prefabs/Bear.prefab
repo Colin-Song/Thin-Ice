@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 3670466414489840965}
   - component: {fileID: 4076539076826573162}
   - component: {fileID: 1230369838854103227}
-  - component: {fileID: -7458022385634822404}
+  - component: {fileID: -9022688123928595598}
   m_Layer: 0
-  m_Name: Dog
+  m_Name: Bear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b99ada8849f1154481c21eef3c8d911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-7458022385634822404
+--- !u!114 &-9022688123928595598
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -5,8 +5,7 @@ using UnityEngine.UIElements;
 public class CharacterSpawn : MonoBehaviour
 {
     private float posx, posy, posz;
-    public GameObject Dog;
-    public GameObject Cat;
+    public GameObject Cat, Dog, Penguin, Pig, Bear, prefab;
     public GameObject characterObject;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,8 +25,29 @@ public class CharacterSpawn : MonoBehaviour
 
     void CharSpawn()
     {
-        bool type = Random.Range(0, 2) == 0;
-        GameObject prefab = type ? Dog : Cat;
+        string[] animals = new string[] { "Cat", "Dog", "Penguin", "Pig", "Bear" };
+        int type = Random.Range(0, 5);
+        if (type == 0)
+        {
+            prefab = Cat;
+        }
+        else if (type == 1)
+        {
+            prefab = Dog;
+        }
+        else if (type == 2)
+        {
+            prefab = Penguin;
+        }
+        else if (type == 3)
+        {
+            prefab = Pig;
+        }
+        else
+        {
+            prefab = Bear;
+        }
+
         posx = -11.8f;
         posy = 0.69f;
         posz = 0f;
@@ -44,7 +64,7 @@ public class CharacterSpawn : MonoBehaviour
         BoothGlobalObjects.afterwalkr = false;
         BoothGlobalObjects.afterwalkl = false;
 
-        character.TYPE = type ? "dog" : "cat";
+        character.TYPE = prefab.ToString();
         character.GENDER = Random.Range(0, 2) == 0 ? "Male" : "Female";
         character.AGE = Random.Range(1, 100); // Age between 1 and 99
         character.HEIGHT = Random.Range(100, 200); // Height between 100 and 199
