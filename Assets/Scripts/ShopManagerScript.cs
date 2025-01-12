@@ -290,21 +290,33 @@ public void CloseInsufficientFundsPopup()
         }
     }
 
-      private void ShowCanvasA()
+  private void ShowCanvasA()
+{
+    if (canvasA != null) canvasA.gameObject.SetActive(true);
+    if (canvasB != null) canvasB.gameObject.SetActive(false);
+
+    Debug.Log("Canvas A is now active, Canvas B is hidden.");
+
+    // Loop through all HoverHandlers and call SwitchToFrontView
+    for (int i = 0; i < hoverHandlers.Length; i++)
     {
-        if (canvasA != null) canvasA.gameObject.SetActive(true);
-        if (canvasB != null) canvasB.gameObject.SetActive(false);
-
-        Debug.Log("Canvas A is now active, Canvas B is hidden.");
+        hoverHandlers[i].SwitchToFrontView();
     }
+}
 
-    private void ShowCanvasB()
+private void ShowCanvasB()
+{
+    if (canvasA != null) canvasA.gameObject.SetActive(false);
+    if (canvasB != null) canvasB.gameObject.SetActive(true);
+
+    Debug.Log("Canvas B is now active, Canvas A is hidden.");
+
+    // Loop through all HoverHandlers and call SwitchToBirdsEyeView
+    for (int i = 0; i < hoverHandlers.Length; i++)
     {
-        if (canvasA != null) canvasA.gameObject.SetActive(false);
-        if (canvasB != null) canvasB.gameObject.SetActive(true);
-
-        Debug.Log("Canvas B is now active, Canvas A is hidden.");
+        hoverHandlers[i].SwitchToBirdsEyeView();
     }
+}
 
    
 
