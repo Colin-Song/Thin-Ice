@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 public class CharacterSpawn : MonoBehaviour
 {
     private float posx, posy, posz;
+    public static int skin, type;
     public GameObject Cat, Dog, Penguin, Pig, Bear, prefab;
     public GameObject characterObject;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -26,7 +27,8 @@ public class CharacterSpawn : MonoBehaviour
     void CharSpawn()
     {
         string[] animals = new string[] { "Cat", "Dog", "Penguin", "Pig", "Bear" };
-        int type = Random.Range(0, 5);
+        type = Random.Range(0, 5);
+        skin = Random.Range(0, 3);
         if (type == 0)
         {
             prefab = Cat;

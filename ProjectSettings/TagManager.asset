@@ -42,17 +42,26 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 2712107177
+    locked: 0
   - name: Character
     uniqueID: 3692757743
     locked: 0
   - name: Tattoo
     uniqueID: 202845425
     locked: 0
-  - name: Wall
-    uniqueID: 2712107177
-    locked: 0
   - name: Desk
     uniqueID: 2035453523
+    locked: 0
+  - name: PiggyBank
+    uniqueID: 4044116357
+    locked: 0
+  - name: Lost&Found
+    uniqueID: 3350939189
+    locked: 0
+  - name: Above Desk
+    uniqueID: 1406068385
     locked: 0
   - name: Clipboard
     uniqueID: 437137527
