@@ -27,6 +27,9 @@ public class ShopManagerScript : MonoBehaviour
 
     public Button openGatchaButton;
 
+    public GameObject ownedItemPopup; // Reference to the "Item Already Owned" popup
+     public TMP_Text ownedItemText;
+
     public GameObject insufficientFundsPopup; // Reference to the insufficient funds popup
 
 
@@ -53,7 +56,7 @@ public class ShopManagerScript : MonoBehaviour
         coinUI.text = "Coins: " + coins.ToString();
         coinUI1.text = "Coins: " + coins.ToString();
         LoadPanels();
-        CheckPurchaseable();
+        //CheckPurchaseable();
 
         if (coinUI1 == null)
     {
@@ -69,17 +72,32 @@ public class ShopManagerScript : MonoBehaviour
     {
     }
 
-    public void OpenGachaWindow()
+ public void OpenGachaWindow()
+{
+    // Reset the reward text and image
+    if (rewardText != null)
     {
-        // Show the gacha window
-        gachaPopup.SetActive(true);
-        openGatchaButton.gameObject.SetActive(false);
+        rewardText.text = string.Empty; // Clear the reward text
+        rewardText.gameObject.SetActive(false); // Hide the reward text
     }
+    if (rewardImage != null)
+    {
+        rewardImage.sprite = null; // Remove the reward image
+        rewardImage.gameObject.SetActive(false); // Hide the reward image
+    }
+
+    // Show the Gacha window
+    gachaPopup.SetActive(true);
+    openGatchaButton.gameObject.SetActive(false);
+    toggleCanvasButton.gameObject.SetActive(false);
+}
+
 
     public void CloseGachaWindow()
 {
     gachaPopup.SetActive(false); // Hide the Gacha window
     openGatchaButton.gameObject.SetActive(true); // Show the Open Gacha button
+    toggleCanvasButton.gameObject.SetActive(true);
     isGachaActive = false; // Reset Gacha active state
 }
 
@@ -88,10 +106,10 @@ public class ShopManagerScript : MonoBehaviour
         coins++;
         coinUI.text = "Coins: " + coins.ToString();
         coinUI1.text = "Coins: " + coins.ToString();
-        CheckPurchaseable(); 
+       // CheckPurchaseable(); 
     }
 
-    public void CheckPurchaseable(){
+   /* public void CheckPurchaseable(){
         for(int i = 0; i < shopItemsSO.Length; i++) {
             if (coins >= shopItemsSO[i].baseCost){
                 myPurchaseBtns[i].interactable = true;
@@ -99,9 +117,9 @@ public class ShopManagerScript : MonoBehaviour
                 myPurchaseBtns[i].interactable = false; 
             }
         }
-    }
+    }*/
 
-    public void PurchaseItem(int btnNo){
+ /*   public void PurchaseItem(int btnNo){
         Debug.Log(btnNo);
         Debug.Log(shopItemsSO.Length); 
         if (coins >= shopItemsSO[btnNo].baseCost){
@@ -110,13 +128,14 @@ public class ShopManagerScript : MonoBehaviour
             coinUI1.text = "Coins: " + coins.ToString();
             CheckPurchaseable(); 
         }
-    }
+    }*/
 
    public void LoadPanels() {
     for (int i = 0; i < shopItemsSO.Length; i++) { 
+        Debug.Log($"Setting panel {i} with item {shopItemsSO[i].title}");
         shopPanels[i].titleTxt.text = shopItemsSO[i].title;
-        shopPanels[i].descriptionTxt.text = shopItemsSO[i].description;
-        shopPanels[i].costTxt.text = "Coins: " + shopItemsSO[i].baseCost.ToString(); 
+        //shopPanels[i].descriptionTxt.text = shopItemsSO[i].description;
+        //shopPanels[i].costTxt.text = "Coins: " + shopItemsSO[i].baseCost.ToString(); 
     }
 }
 
@@ -140,7 +159,7 @@ public void StartGacha()
     coins -= gachaCost;
     coinUI.text = "Coins: " + coins.ToString();
     coinUI1.text = "Coins: " + coins.ToString();
-    CheckPurchaseable();
+   // CheckPurchaseable();
 
     Debug.Log("Gacha spin started.");
     gachaPopup.SetActive(true); // Open the popup immediately, even if reward is hidden.
@@ -163,84 +182,77 @@ public void OnGachaAnimationComplete()
     int attempts = 0;
     int rewardIndex = -1;
 
-    // Attempt to find a random unpurchased item
     while (attempts < maxAttempts)
     {
-        if (AllItemsPurchased())
-        {
-            Debug.Log("All items purchased!");
-            rewardIndex = -1;
-            break;
-        }
-
+        // Randomly select an item
         int randomIndex = Random.Range(0, shopItemsSO.Length);
 
-        if (!purchasedItems[randomIndex])
+        if (purchasedItems[randomIndex])
         {
+            // If the item is already owned, show a popup and break
             rewardIndex = randomIndex;
-            Debug.Log($"Reward chosen: {shopItemsSO[randomIndex].title}");
-            break;
+            Debug.Log($"Item already owned: {shopItemsSO[randomIndex].title}");
+
+
+            // Update the "Item Already Owned" popup
+            ownedItemText.text = $"You already own: {shopItemsSO[randomIndex].title}";
+            //Invoke("ownedItemPopup", 2.0f)
+            ShowOwnedPopup(); 
+            return; // Exit the function without giving a reward
         }
 
-        attempts++;
+        rewardIndex = randomIndex;
+        Debug.Log($"Reward chosen: {shopItemsSO[rewardIndex].title}");
+        break;
     }
 
     if (rewardIndex == -1)
     {
-        rewardText.text = "All items have been purchased!";
-        rewardImage.sprite = null; // No reward image
+        // If no valid item is found, fallback behavior
+        rewardText.text = "No reward selected!";
+        rewardImage.sprite = null;
+        rewardImage.gameObject.SetActive(false);
     }
     else
     {
-        // Mark the item as purchased
+        // Update reward UI for newly received items
         purchasedItems[rewardIndex] = true;
-
-        // Update reward UI
         rewardImage.sprite = shopItemsSO[rewardIndex].itemImage;
         rewardText.text = $"You received: {shopItemsSO[rewardIndex].title}";
 
-        // Disable the item’s purchase button if you still use it
-        myPurchaseBtns[rewardIndex].interactable = false;
-        myPurchaseBtns[rewardIndex].GetComponentInChildren<TMP_Text>().text = "Purchased";
+        rewardImage.gameObject.SetActive(true);
+        rewardText.gameObject.SetActive(true);
 
-        // ======================
-        //      NEW CODE
-        // ======================
-        // If you use a parallel array approach:
+        // Call hover handler for the item
         hoverHandlers[rewardIndex].GrantItemFromGacha();
 
-        
-
-
-
-       if (showingCanvasA){
-        hoverHandlers[rewardIndex].SwitchToFrontView();
-       } else {
-        hoverHandlers[rewardIndex].SwitchToBirdsEyeView();
-       }
-
-
-        // OR, if searching for the matching HoverHandler:
-        /*
-        HoverHandler[] allHandlers = FindObjectsOfType<HoverHandler>();
-        foreach (HoverHandler handler in allHandlers)
+        // Update view
+        if (showingCanvasA)
         {
-            if (handler.shopItem == shopItemsSO[rewardIndex])
-            {
-                handler.GrantItemFromGacha();
-                break;
-            }
+            hoverHandlers[rewardIndex].SwitchToFrontView();
         }
-        */
+        else
+        {
+            hoverHandlers[rewardIndex].SwitchToBirdsEyeView();
+        }
     }
 
-    // Show the reward popup
-    rewardImage.gameObject.SetActive(true);
-    rewardText.gameObject.SetActive(true);
-
-    Debug.Log("Reward displayed, popup is visible.");
+    Debug.Log("Reward displayed.");
     isGachaActive = false;
 }
+
+
+public void ShowOwnedPopup()
+{
+    ownedItemPopup.SetActive(true); // Show the pop-up
+    Invoke("CloseOwnedPopup", 2.0f); // Automatically close after 2 seconds
+}
+
+public void CloseOwnedPopup()
+{
+    ownedItemPopup.SetActive(false); // Hide the pop-up
+}
+
 
 
 public void ShowInsufficientFundsPopup()
@@ -263,6 +275,7 @@ public void CloseInsufficientFundsPopup()
     {
         gachaPopup.SetActive(false);
         openGatchaButton.gameObject.SetActive(true);
+        toggleCanvasButton.gameObject.SetActive(true);
         //postProcessVolume.SetActive(false);
     }
 
