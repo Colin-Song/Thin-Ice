@@ -16,4 +16,6 @@ public class BoothGlobalObjects : MonoBehaviour
     public static char AorR = 'n';
     public static bool charDelete = false;
     public static bool prewalk, middle, afterwalkr, afterwalkl;
+
+    public static int customers;
 }

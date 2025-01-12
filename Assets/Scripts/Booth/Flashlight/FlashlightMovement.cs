@@ -4,6 +4,7 @@ public class FlashlightMovement : MonoBehaviour
 {
     private Vector3 offset;
     public GameObject hand;
+    public Sprite newSprite; // Assign the new sprite in the Inspector
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
