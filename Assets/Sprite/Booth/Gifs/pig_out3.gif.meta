@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 6f8cb04711434104dba9e5788765e60b
+guid: 7879a39d1d0607c499b3734b09dc754e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8848936151577345214
-    second: long_paw 1_0
-  - first:
-      213: 4255542510392500281
-    second: long_paw 1_1
+      213: 2477716944316528393
+    second: pig_out3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: long_paw 1_0
+      name: pig_out3_0
       rect:
         serializedVersion: 2
-        x: 768
-        y: 1442
-        width: 59
-        height: 23
+        x: 1449
+        y: 267
+        width: 700
+        height: 1401
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ebc31e2db8cbdca70800000000000000
-      internalID: 8848936151577345214
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: long_paw 1_1
-      rect:
-        serializedVersion: 2
-        x: 560
-        y: 828
-        width: 2656
-        height: 491
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 930e48acd59be0b30800000000000000
-      internalID: 4255542510392500281
+      spriteID: 907f3ffee6e926220800000000000000
+      internalID: 2477716944316528393
       vertices: []
       indices: 
       edges: []
@@ -159,9 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      long_paw 1_0: 8848936151577345214
-      long_paw 1_1: 4255542510392500281
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

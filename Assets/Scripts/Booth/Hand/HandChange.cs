@@ -21,7 +21,7 @@ public class HandChange : MonoBehaviour
         {
             spriteRenderer.sprite = newSprite2;
         }
-        else
+        else if (!BoothGlobalObjects.IsFlashlightHolding && !BoothGlobalObjects.IsFlashlightOn)
         {
             spriteRenderer.sprite = newSprite3;
         }

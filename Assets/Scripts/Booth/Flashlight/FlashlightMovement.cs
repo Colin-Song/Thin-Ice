@@ -2,14 +2,20 @@ using UnityEngine;
 
 public class FlashlightMovement : MonoBehaviour
 {
+    private SpriteRenderer spriteRenderer;
     private Vector3 offset;
     public GameObject hand;
-    public Sprite newSprite; // Assign the new sprite in the Inspector
+    public Sprite newSprite;
+    UnityEngine.Color color;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        color = spriteRenderer.color;
+        color.a = 1;
 
+        spriteRenderer.color = color;
     }
 
     // Update is called once per frame
@@ -24,6 +30,8 @@ public class FlashlightMovement : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(0))
                 {
+                    color.a = 0;
+                    spriteRenderer.color = color;
                     BoothGlobalObjects.Flashlightposx = transform.position.x;
                     BoothGlobalObjects.Flashlightposy = transform.position.y;
                     BoothGlobalObjects.IsFlashlightHolding = true;
@@ -32,10 +40,14 @@ public class FlashlightMovement : MonoBehaviour
 
                 if (Input.GetMouseButton(0))
                 {
+                    color.a = 0;
+                    spriteRenderer.color = color;
                     BoothGlobalObjects.IsFlashlightHolding = true;
                 }
                 else if (Input.GetMouseButtonUp(0))
                 {
+                    color.a = 1;
+                    spriteRenderer.color = color;
                     BoothGlobalObjects.IsFlashlightHolding = false;
                     BoothGlobalObjects.IsFlashlightOn = false;
                 }

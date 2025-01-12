@@ -60,7 +60,7 @@ public class LostFoundClick : MonoBehaviour
         }
         else
         {
-            first_item = Instantiate(nothing, position1, spawnRotation);
+            //first_item = Instantiate(nothing, position1, spawnRotation);
         }
 
         if (LostFoundObjects.placed[1])
@@ -69,7 +69,7 @@ public class LostFoundClick : MonoBehaviour
         }
         else
         {
-            sec_item = Instantiate(nothing, position2, spawnRotation);
+            //sec_item = Instantiate(nothing, position2, spawnRotation);
         }
 
         if (LostFoundObjects.placed[2])
@@ -78,7 +78,7 @@ public class LostFoundClick : MonoBehaviour
         }
         else
         {
-            third_item = Instantiate(nothing, position3, spawnRotation);
+            //third_item = Instantiate(nothing, position3, spawnRotation);
         }
 
         if (LostFoundObjects.placed[3])
@@ -87,7 +87,7 @@ public class LostFoundClick : MonoBehaviour
         }
         else
         {
-            fourth_item = Instantiate(nothing, position4, spawnRotation);
+            //fourth_item = Instantiate(nothing, position4, spawnRotation);
         }
 
         if (LostFoundObjects.placed[4])
@@ -96,7 +96,7 @@ public class LostFoundClick : MonoBehaviour
         }
         else
         {
-            fifth_item = Instantiate(nothing, position5, spawnRotation);
+            //fifth_item = Instantiate(nothing, position5, spawnRotation);
         }
 
 
