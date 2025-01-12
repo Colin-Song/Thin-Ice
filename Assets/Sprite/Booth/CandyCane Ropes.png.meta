@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CandyCane Ropes_0: 9124971664744542800
+      CandyCane Ropes_1: 72265674110493007
+      CandyCane Ropes_2: -5365640133034521912
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

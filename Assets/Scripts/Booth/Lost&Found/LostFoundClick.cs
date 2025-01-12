@@ -11,7 +11,7 @@ using static UnityEditor.PlayerSettings;
 public class LostFoundClick : MonoBehaviour
 {
     public Canvas canvas; // Reference to the Canvas in the scene
-    private GameObject textBox1, textBox2, textBox3, textBox4, textBox5,;
+    private GameObject textBox1, textBox2, textBox3, textBox4, textBox5;
     private float posx, posy, posz;
     public static int item_count = BoothGlobalObjects.lfobjects;
     public  GameObject POPUP;
@@ -208,11 +208,5 @@ public class LostFoundClick : MonoBehaviour
         Destroy(pants);
         Destroy(phone);
         Destroy(wallet);
-
-        Destroy(textObject1);
-        Destroy(textObject1);
-        Destroy(textObject1);
-        Destroy(textObject1);
-        Destroy(textObject1);
     }
 }

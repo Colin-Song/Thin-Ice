@@ -309,7 +309,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      form_n_clip_0: 375581815312164933
+      form_n_clip_1: 4595406491919351343
+      form_n_clip_2: -7110119170947720764
+      form_n_clip_3: -2475060063911245840
+      form_n_clip_4: -6777449644875993205
+      form_n_clip_5: 1159517175953558768
+      form_n_clip_6: -8344007251647367297
+      form_n_clip_7: 5966242461338732479
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

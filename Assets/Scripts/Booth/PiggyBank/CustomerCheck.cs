@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.TextCore.Text;
+using UnityEngine.SceneManagement;
 
 public class CustomerCheck : MonoBehaviour
 {
@@ -26,12 +27,12 @@ public class CustomerCheck : MonoBehaviour
                 CharacterAttributes char1attributes = char1.GetComponent<CharacterAttributes>();
                 if (char1attributes.KILLER)
                 {
-                    GlobalObjects.killerIn = true;
+                    GlobalObjects.Instance.killerIn = true;
                 }
                 else
                 {
                     BoothGlobalObjects.customers += 1;
-                    GlobalObjects.money += Random.Range(20, 30);
+                    GlobalObjects.Instance.money += Random.Range(20, 30);
                 }
             }
             else if (char2 != null)
@@ -39,12 +40,12 @@ public class CustomerCheck : MonoBehaviour
                 CharacterAttributes char2attributes = char2.GetComponent<CharacterAttributes>();
                 if (char2attributes.KILLER)
                 {
-                    GlobalObjects.killerIn = true;
+                    GlobalObjects.Instance.killerIn = true;
                 }
                 else
                 {
                     BoothGlobalObjects.customers += 1;
-                    GlobalObjects.money += Random.Range(20, 30);
+                    GlobalObjects.Instance.money += Random.Range(20, 30);
                 }
             }
             else if (char3 != null)
@@ -52,12 +53,12 @@ public class CustomerCheck : MonoBehaviour
                 CharacterAttributes char3attributes = char3.GetComponent<CharacterAttributes>();
                 if (char3attributes.KILLER)
                 {
-                    GlobalObjects.killerIn = true;
+                    GlobalObjects.Instance.killerIn = true;
                 }
                 else
                 {
                     BoothGlobalObjects.customers += 1;
-                    GlobalObjects.money += Random.Range(20, 30);
+                    GlobalObjects.Instance.money += Random.Range(20, 30);
                 }
             }
             else if (char4 != null)
@@ -65,12 +66,13 @@ public class CustomerCheck : MonoBehaviour
                 CharacterAttributes char4attributes = char4.GetComponent<CharacterAttributes>();
                 if (char4attributes.KILLER)
                 {
-                    GlobalObjects.killerIn = true;
+                    GlobalObjects.Instance.killerIn = true;
+                    SceneManager.LoadScene("MurderEnding");
                 }
                 else
                 {
                     BoothGlobalObjects.customers += 1;
-                    GlobalObjects.money += Random.Range(20, 30);
+                    GlobalObjects.Instance.money += Random.Range(20, 30);
                 }
             }
             else if (char5 != null)
@@ -78,12 +80,12 @@ public class CustomerCheck : MonoBehaviour
                 CharacterAttributes char5attributes = char5.GetComponent<CharacterAttributes>();
                 if (char5attributes.KILLER)
                 {
-                    GlobalObjects.killerIn = true;
+                    GlobalObjects.Instance.killerIn = true;
                 }
                 else
                 {
                     BoothGlobalObjects.customers += 1;
-                    GlobalObjects.money += Random.Range(20, 30);
+                    GlobalObjects.Instance.money += Random.Range(20, 30);
                 }
             }
         }
@@ -100,11 +102,13 @@ public class CustomerCheck : MonoBehaviour
                 CharacterAttributes char1attributes = char1.GetComponent<CharacterAttributes>();
                 if (!char1attributes.KILLER)
                 {
-                    GlobalObjects.X += 1;
+                    GlobalObjects.Instance.X += 1;
+
+
                 }
                 else
                 {
-                    GlobalObjects.money += Random.Range(20, 30);
+                    GlobalObjects.Instance.money += Random.Range(20, 30);
                 }
             }
             else if (char2 != null)
@@ -112,11 +116,11 @@ public class CustomerCheck : MonoBehaviour
                 CharacterAttributes char2attributes = char2.GetComponent<CharacterAttributes>();
                 if (!char2attributes.KILLER)
                 {
-                    GlobalObjects.X += 1;
+                    GlobalObjects.Instance.X += 1;
                 }
                 else
                 {
-                    GlobalObjects.money += Random.Range(20, 30);
+                    GlobalObjects.Instance.money += Random.Range(20, 30);
                 }
             }
             else if (char3 != null)
@@ -124,11 +128,11 @@ public class CustomerCheck : MonoBehaviour
                 CharacterAttributes char3attributes = char3.GetComponent<CharacterAttributes>();
                 if (!char3attributes.KILLER)
                 {
-                    GlobalObjects.X += 1;
+                    GlobalObjects.Instance.X += 1;
                 }
                 else
                 {
-                    GlobalObjects.money += Random.Range(20, 30);
+                    GlobalObjects.Instance.money += Random.Range(20, 30);
                 }
             }
             else if (char4 != null)
@@ -136,11 +140,11 @@ public class CustomerCheck : MonoBehaviour
                 CharacterAttributes char4attributes = char4.GetComponent<CharacterAttributes>();
                 if (!char4attributes.KILLER)
                 {
-                    GlobalObjects.X += 1;
+                    GlobalObjects.Instance.X += 1;
                 }
                 else
                 {
-                    GlobalObjects.money += Random.Range(20, 30);
+                    GlobalObjects.Instance.money += Random.Range(20, 30);
                 }
             }
             else if (char5 != null)
@@ -148,11 +152,11 @@ public class CustomerCheck : MonoBehaviour
                 CharacterAttributes char5attributes = char5.GetComponent<CharacterAttributes>();
                 if (!char5attributes.KILLER)
                 {
-                    GlobalObjects.X += 1;
+                    GlobalObjects.Instance.X += 1;
                 }
                 else
                 {
-                    GlobalObjects.money += Random.Range(20, 30);
+                    GlobalObjects.Instance.money += Random.Range(20, 30);
                 }
             }
         }

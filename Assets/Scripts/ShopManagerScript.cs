@@ -88,7 +88,10 @@ public class ShopManagerScript : MonoBehaviour
             OnGachaAnimationComplete();
         }
     }
-
+    public void gotoBooth()
+    {
+        SceneManager.LoadScene("Booth");
+    }
     void ConvertDictionaryToArray_ForLoop(Dictionary<string, bool> dict, ShopItemSO[] keys, out bool[] valuesArray)
     {
         // Initialize the array with the same count as the list

@@ -1979,7 +1979,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Generate Coins!
+  m_text: 'NEXT DAY
 
 '
   m_isRightToLeft: 0
@@ -2145,7 +2145,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 633083042}
         m_TargetAssemblyTypeName: ShopManagerScript, Assembly-CSharp
-        m_MethodName: AddCoins
+        m_MethodName: gotoBooth
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

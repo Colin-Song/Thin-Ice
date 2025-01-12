@@ -87,5 +87,8 @@ TagManager:
   - name: Hand
     uniqueID: 823234329
     locked: 0
+  - name: button
+    uniqueID: 3228736787
+    locked: 0
   m_RenderingLayers:
   - Default

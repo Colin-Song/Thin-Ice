@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class TimeManager : MonoBehaviour
@@ -86,6 +87,7 @@ public class TimeManager : MonoBehaviour
             IrisIn();
             IrisOut();
             StartCoroutine(activatePanel());
+            
         }
 
         // Calculate total minutes since 8 AM
@@ -108,6 +110,8 @@ public class TimeManager : MonoBehaviour
             string amPmLabel = isAM ? "AM" : "PM";
             timeDisplay.text = $"Day {day} - {displayHour} {amPmLabel}";
         }
+        
+       
     }
 
     /// <summary>
@@ -116,20 +120,21 @@ public class TimeManager : MonoBehaviour
     /// </summary>
     public void StartNextDay()
     {
-        // Increment day counter
-        day++;
+        SceneManager.LoadScene("Lake");
+        // // Increment day counter
+        // day++;
 
-        // Reset to 8:00 AM
-        hour = 8;
-        minute = 0;
-        currentDayTimeInMinutes = 0f; 
-        timeDisplay.gameObject.SetActive(true);
+        // // Reset to 8:00 AM
+        // hour = 8;
+        // minute = 0;
+        // currentDayTimeInMinutes = 0f; 
+        // timeDisplay.gameObject.SetActive(true);
         
-        // Hide the "Day End" panel
-        IrisIn();
-        IrisOut();
-        StartCoroutine(deactivatePanel());
-        isDayEnded = false;
+        // // Hide the "Day End" panel
+        // IrisIn();
+        // IrisOut();
+        // StartCoroutine(deactivatePanel());
+        // isDayEnded = false;
     }
 
     private IEnumerator activatePanel()
@@ -137,6 +142,10 @@ public class TimeManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         dayEndPanel.SetActive(true);
         ShowDayEndSummary();
+        
+        yield return new WaitForSeconds(5f);
+
+        SceneManager.LoadScene("Lake");
     }
 
     private IEnumerator deactivatePanel()

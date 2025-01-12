@@ -334,7 +334,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      lost_n_found_box_0: 124813862662032285
+      lost_n_found_box_1: 808478217199417721
+      lost_n_found_box_2: 791813769224613328
+      lost_n_found_box_3: 7710246319425445803
+      lost_n_found_box_4: -8068692907559848352
+      lost_n_found_box_5: 3689051762980101608
+      lost_n_found_box_6: -4436113611258715482
+      lost_n_found_box_7: -6806677684577332991
+      lost_n_found_box_8: -8079395640167758241
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
