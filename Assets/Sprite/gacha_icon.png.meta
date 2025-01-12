@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 94b52d008e7f15347a0bd76fdd03e49b
+guid: f0d1d611f55cb4c28990953519e11f1f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3593679444064725708
-    second: ornament_1_3_0
+      213: -2272094241064506694
+    second: gacha_icon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ornament_1_3_0
+      name: gacha_icon_0
       rect:
         serializedVersion: 2
-        x: 1621
-        y: 882
-        width: 455
-        height: 676
+        x: 1453
+        y: 836
+        width: 739
+        height: 768
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ccae91c0a605fd130800000000000000
-      internalID: 3593679444064725708
+      spriteID: abaa3296356e770e0800000000000000
+      internalID: -2272094241064506694
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      ornament_1_3_0: 3593679444064725708
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

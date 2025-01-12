@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      realcandycane_0: -2511456528243961908
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

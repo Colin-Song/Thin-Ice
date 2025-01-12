@@ -459,7 +459,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      xmas light 1_0: -8798449980643897452
+      xmas light 1_1: -3822594770971826622
+      xmas light 1_10: 926502911477043629
+      xmas light 1_11: -3752198418064457530
+      xmas light 1_12: 1200691572212644355
+      xmas light 1_13: 8339639370625729086
+      xmas light 1_2: -7443529097391322009
+      xmas light 1_3: -6730400131972536870
+      xmas light 1_4: -5656585435563008673
+      xmas light 1_5: -7217215734222898233
+      xmas light 1_6: -5633410545201722722
+      xmas light 1_7: -1158951077540857496
+      xmas light 1_8: 7380214169630679914
+      xmas light 1_9: -716909019755706955
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
