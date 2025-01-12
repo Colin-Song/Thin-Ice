@@ -15,5 +15,5 @@ MonoBehaviour:
   title: Christmas Lights
   description: 
   baseCost: 0
-  itemImage: {fileID: -2413806693520163455, guid: cfc9f64fc53cd4d4bb65d4906b77f3d9, type: 3}
+  itemImage: {fileID: 2287984977022777828, guid: eba9492b73d6a5945982dead49fbee9c, type: 3}
   birdsEyeImage: {fileID: 7482667652216324306, guid: bfff40695b9d86d4d8e2b1545d7ecdf7, type: 3}

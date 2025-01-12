@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd82915271c7de84d8df477a33f4f959, type: 3}
-  m_Name: Ornament 3
+  m_Name: purple ornament
   m_EditorClassIdentifier: 
-  title: Ornament 3
+  title: Purple Ornament
   description: 
   baseCost: 0
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 5937215281572683752, guid: 5d6455c203fff4645aaf5c269aaff46f, type: 3}
   birdsEyeImage: {fileID: 0}

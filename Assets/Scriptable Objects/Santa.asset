@@ -15,5 +15,5 @@ MonoBehaviour:
   title: Santa
   description: 
   baseCost: 0
-  itemImage: {fileID: 0}
+  itemImage: {fileID: -422874382228108826, guid: d44db233bd8dda24383c429c8e505bd1, type: 3}
   birdsEyeImage: {fileID: 0}

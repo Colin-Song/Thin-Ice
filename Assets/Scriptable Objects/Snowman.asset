@@ -15,5 +15,5 @@ MonoBehaviour:
   title: Snowman
   description: 
   baseCost: 0
-  itemImage: {fileID: 0}
+  itemImage: {fileID: -6543393951714099525, guid: 1b4100c0419ab86468107bbb1cda76d8, type: 3}
   birdsEyeImage: {fileID: 0}

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd82915271c7de84d8df477a33f4f959, type: 3}
-  m_Name: Ornament 6
+  m_Name: turqoise ornament
   m_EditorClassIdentifier: 
-  title: Ornament 6
+  title: Navy Ornament
   description: 
   baseCost: 0
-  itemImage: {fileID: 0}
+  itemImage: {fileID: -8867728239519170993, guid: f0d7e12910d257e49bdedda6b9cbd2c1, type: 3}
   birdsEyeImage: {fileID: 0}

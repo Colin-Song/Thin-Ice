@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd82915271c7de84d8df477a33f4f959, type: 3}
-  m_Name: Ornament 2
+  m_Name: green ornament
   m_EditorClassIdentifier: 
-  title: Ornament 2
+  title: Green Ornament
   description: 
   baseCost: 0
-  itemImage: {fileID: 0}
+  itemImage: {fileID: 3593679444064725708, guid: 94b52d008e7f15347a0bd76fdd03e49b, type: 3}
   birdsEyeImage: {fileID: 0}
