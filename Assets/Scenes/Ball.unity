@@ -282,6 +282,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ornamentgacha
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 03f4b924dbfb246c198a0c7b52e3aa8f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6317578925029434746, guid: 03f4b924dbfb246c198a0c7b52e3aa8f, type: 3}
       propertyPath: m_CastShadows
       value: 1
