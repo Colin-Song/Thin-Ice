@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      inflatable_santa_0: -422874382228108826
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

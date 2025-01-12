@@ -4,6 +4,8 @@ public class GlobalObjects : MonoBehaviour
 {
     public static int money, X;
     public static bool killerIn;
+    // public static ShopItemSO[] shopItemsSO;
+    public static bool[] purchasedItems;
 
     void Start()
     {

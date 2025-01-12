@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      christmas_lights_0: 2287984977022777828
+      christmas_lights_1: 3656515753863097665
+      christmas_lights_2: 854675043574936200
+      christmas_lights_3: -3895849863108387289
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

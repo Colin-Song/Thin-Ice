@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
 
 public class ShopManagerScript : MonoBehaviour
 {
+    public static bool ifSpinSuccessful = false;    
     public int coins;
     public TMP_Text coinUI;
 
@@ -70,26 +72,34 @@ public class ShopManagerScript : MonoBehaviour
 
     void Update()
     {
+        if (ifSpinSuccessful)
+        {
+            ifSpinSuccessful = false;
+            OnGachaAnimationComplete();
+        }
     }
 
  public void OpenGachaWindow()
 {
-    // Reset the reward text and image
-    if (rewardText != null)
-    {
-        rewardText.text = string.Empty; // Clear the reward text
-        rewardText.gameObject.SetActive(false); // Hide the reward text
-    }
-    if (rewardImage != null)
-    {
-        rewardImage.sprite = null; // Remove the reward image
-        rewardImage.gameObject.SetActive(false); // Hide the reward image
-    }
+    // // Reset the reward text and image
+    // if (rewardText != null)
+    // {
+    //     rewardText.text = string.Empty; // Clear the reward text
+    //     rewardText.gameObject.SetActive(false); // Hide the reward text
+    // }
+    // if (rewardImage != null)
+    // {
+    //     rewardImage.sprite = null; // Remove the reward image
+    //     rewardImage.gameObject.SetActive(false); // Hide the reward image
+    // }
 
-    // Show the Gacha window
-    gachaPopup.SetActive(true);
-    openGatchaButton.gameObject.SetActive(false);
-    toggleCanvasButton.gameObject.SetActive(false);
+    // // Show the Gacha window
+    // gachaPopup.SetActive(true);
+    // openGatchaButton.gameObject.SetActive(false);
+    // toggleCanvasButton.gameObject.SetActive(false);
+
+    SceneManager.LoadScene("GotchaBall");
+
 }
 
 

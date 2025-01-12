@@ -160,6 +160,10 @@ PrefabInstance:
       value: Christmas Light
       objectReference: {fileID: 0}
     - target: {fileID: 1575726744534423770, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1575726744534423770, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -227,6 +231,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Christmas Light
       objectReference: {fileID: 0}
+    - target: {fileID: 2481824531303128598, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3328888862567255995, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -258,6 +266,10 @@ PrefabInstance:
     - target: {fileID: 4145664138727263085, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489122973671041697, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4943251853231660377, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_Type
@@ -464,7 +476,7 @@ GameObject:
   - component: {fileID: 28597408}
   - component: {fileID: 28597410}
   - component: {fileID: 28597409}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Close Button Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -614,6 +626,10 @@ PrefabInstance:
       value: Gold Ornament
       objectReference: {fileID: 0}
     - target: {fileID: 1575726744534423770, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1575726744534423770, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -669,6 +685,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gold Ornament
       objectReference: {fileID: 0}
+    - target: {fileID: 2481824531303128598, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4145664138727263085, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -684,6 +704,10 @@ PrefabInstance:
     - target: {fileID: 4145664138727263085, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489122973671041697, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4943251853231660377, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_Sprite
@@ -856,6 +880,10 @@ PrefabInstance:
       value: Snowman
       objectReference: {fileID: 0}
     - target: {fileID: 1575726744534423770, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1575726744534423770, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -911,6 +939,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Snowman
       objectReference: {fileID: 0}
+    - target: {fileID: 2481824531303128598, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4145664138727263085, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -926,6 +958,10 @@ PrefabInstance:
     - target: {fileID: 4145664138727263085, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489122973671041697, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4943251853231660377, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_Sprite
@@ -1118,7 +1154,7 @@ GameObject:
   - component: {fileID: 173315151}
   - component: {fileID: 173315150}
   - component: {fileID: 173315149}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: bird eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1229,7 +1265,7 @@ GameObject:
   - component: {fileID: 196604437}
   - component: {fileID: 196604439}
   - component: {fileID: 196604438}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: bench
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1318,6 +1354,10 @@ PrefabInstance:
       value: Red Ornament
       objectReference: {fileID: 0}
     - target: {fileID: 1575726744534423770, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1575726744534423770, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -1373,6 +1413,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Ornament
       objectReference: {fileID: 0}
+    - target: {fileID: 2481824531303128598, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4145664138727263085, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1388,6 +1432,10 @@ PrefabInstance:
     - target: {fileID: 4145664138727263085, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489122973671041697, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4943251853231660377, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_Sprite
@@ -1557,7 +1605,7 @@ GameObject:
   - component: {fileID: 247575078}
   - component: {fileID: 247575077}
   - component: {fileID: 247575076}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1674,7 +1722,7 @@ GameObject:
   - component: {fileID: 255527670}
   - component: {fileID: 255527672}
   - component: {fileID: 255527671}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1750,7 +1798,7 @@ GameObject:
   - component: {fileID: 269396759}
   - component: {fileID: 269396758}
   - component: {fileID: 269396757}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: GachaSpinButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1882,7 +1930,7 @@ GameObject:
   - component: {fileID: 277671832}
   - component: {fileID: 277671834}
   - component: {fileID: 277671833}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Generate Coins Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2021,7 +2069,7 @@ GameObject:
   - component: {fileID: 296566152}
   - component: {fileID: 296566151}
   - component: {fileID: 296566150}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Generate Coins Btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2153,7 +2201,7 @@ GameObject:
   - component: {fileID: 299376418}
   - component: {fileID: 299376420}
   - component: {fileID: 299376419}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: gold ornament
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2258,6 +2306,10 @@ PrefabInstance:
       value: Turqoise Ornament
       objectReference: {fileID: 0}
     - target: {fileID: 1575726744534423770, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1575726744534423770, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -2321,6 +2373,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Turqoise Ornament
       objectReference: {fileID: 0}
+    - target: {fileID: 2481824531303128598, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3328888862567255995, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2352,6 +2408,10 @@ PrefabInstance:
     - target: {fileID: 4145664138727263085, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489122973671041697, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4943251853231660377, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_Sprite
@@ -2526,7 +2586,7 @@ GameObject:
   - component: {fileID: 335541851}
   - component: {fileID: 335541850}
   - component: {fileID: 335541849}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Scroll Rect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2653,7 +2713,7 @@ GameObject:
   - component: {fileID: 366907466}
   - component: {fileID: 366907467}
   - component: {fileID: 366907468}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: alreadyowned text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2793,7 +2853,7 @@ GameObject:
   - component: {fileID: 442526255}
   - component: {fileID: 442526257}
   - component: {fileID: 442526256}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2962,7 +3022,7 @@ GameObject:
   - component: {fileID: 456748593}
   - component: {fileID: 456748592}
   - component: {fileID: 456748591}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: OpenGachaButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2978,7 +3038,7 @@ RectTransform:
   m_GameObject: {fileID: 456748589}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1821513404}
@@ -2986,8 +3046,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 792, y: 423}
-  m_SizeDelta: {x: 239.5955, y: 160.9471}
+  m_AnchoredPosition: {x: 867, y: 441}
+  m_SizeDelta: {x: 739, y: 866.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &456748591
 MonoBehaviour:
@@ -3058,15 +3118,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8415094, g: 0.004763192, b: 0.30733374, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -2272094241064506694, guid: f0d1d611f55cb4c28990953519e11f1f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3105,7 +3165,7 @@ GameObject:
   - component: {fileID: 502849112}
   - component: {fileID: 502849114}
   - component: {fileID: 502849113}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: turqoise
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3191,13 +3251,13 @@ GameObject:
   - component: {fileID: 582743166}
   - component: {fileID: 582743168}
   - component: {fileID: 582743167}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: GachaWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &582743166
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3290,7 +3350,7 @@ GameObject:
   - component: {fileID: 609866420}
   - component: {fileID: 609866422}
   - component: {fileID: 609866421}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: turqoise
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3365,7 +3425,7 @@ GameObject:
   - component: {fileID: 627815607}
   - component: {fileID: 627815609}
   - component: {fileID: 627815608}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Background Img bird
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3443,7 +3503,7 @@ GameObject:
   - component: {fileID: 633083042}
   - component: {fileID: 633083044}
   - component: {fileID: 633083043}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3704,7 +3764,7 @@ GameObject:
   - component: {fileID: 693620042}
   - component: {fileID: 693620044}
   - component: {fileID: 693620043}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: GachaReward Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3840,7 +3900,7 @@ GameObject:
   - component: {fileID: 770793061}
   - component: {fileID: 770793063}
   - component: {fileID: 770793062}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: candy cane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3915,7 +3975,7 @@ GameObject:
   - component: {fileID: 772242988}
   - component: {fileID: 772242990}
   - component: {fileID: 772242989}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Coin UI Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4063,7 +4123,7 @@ GameObject:
   - component: {fileID: 834813467}
   - component: {fileID: 834813466}
   - component: {fileID: 834813465}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: ChangeViewButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4079,7 +4139,7 @@ RectTransform:
   m_GameObject: {fileID: 834813463}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1232399756}
@@ -4087,8 +4147,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 548, y: 444}
-  m_SizeDelta: {x: 205.8133, y: 88.3079}
+  m_AnchoredPosition: {x: 683, y: 466}
+  m_SizeDelta: {x: 913, y: 494.99997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &834813465
 MonoBehaviour:
@@ -4166,8 +4226,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -6077813151094938006, guid: 641860fe23a2a46359d87d1cc65b0bec, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4208,7 +4268,7 @@ GameObject:
   - component: {fileID: 931551033}
   - component: {fileID: 931551032}
   - component: {fileID: 931551031}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Contents
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4356,7 +4416,7 @@ GameObject:
   - component: {fileID: 962431534}
   - component: {fileID: 962431533}
   - component: {fileID: 962431532}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Close Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4493,7 +4553,7 @@ GameObject:
   - component: {fileID: 972029390}
   - component: {fileID: 972029392}
   - component: {fileID: 972029391}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Close Button Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4629,7 +4689,7 @@ GameObject:
   - component: {fileID: 1020072919}
   - component: {fileID: 1020072921}
   - component: {fileID: 1020072920}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: GachaImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4652,7 +4712,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000019073, y: -0.00002861}
+  m_AnchoredPosition: {x: 0.000019073, y: -7}
   m_SizeDelta: {x: 423.5164, y: 351.6238}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1020072920
@@ -4704,7 +4764,7 @@ GameObject:
   - component: {fileID: 1021174905}
   - component: {fileID: 1021174907}
   - component: {fileID: 1021174906}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: santa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4779,7 +4839,7 @@ GameObject:
   - component: {fileID: 1072378097}
   - component: {fileID: 1072378096}
   - component: {fileID: 1072378095}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Insufficient Funds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4855,7 +4915,7 @@ GameObject:
   - component: {fileID: 1075244347}
   - component: {fileID: 1075244349}
   - component: {fileID: 1075244348}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: GachaSpinButton Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4991,7 +5051,7 @@ GameObject:
   - component: {fileID: 1115016500}
   - component: {fileID: 1115016502}
   - component: {fileID: 1115016501}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: magenta ornament
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5066,7 +5126,7 @@ GameObject:
   - component: {fileID: 1117021125}
   - component: {fileID: 1117021127}
   - component: {fileID: 1117021126}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5157,7 +5217,7 @@ GameObject:
   - component: {fileID: 1232399756}
   - component: {fileID: 1232399758}
   - component: {fileID: 1232399757}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5180,7 +5240,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -379}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1232399757
@@ -5203,7 +5263,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Change View
+  m_text: CHANGE VIEW
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5212,8 +5272,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5230,8 +5290,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5293,7 +5353,7 @@ GameObject:
   - component: {fileID: 1243626905}
   - component: {fileID: 1243626906}
   - component: {fileID: 1243626907}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: GachaReward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5368,7 +5428,7 @@ GameObject:
   - component: {fileID: 1293657502}
   - component: {fileID: 1293657504}
   - component: {fileID: 1293657503}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Santa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5469,6 +5529,10 @@ PrefabInstance:
       value: Green Ornament
       objectReference: {fileID: 0}
     - target: {fileID: 1575726744534423770, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1575726744534423770, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -5524,6 +5588,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Green Ornament
       objectReference: {fileID: 0}
+    - target: {fileID: 2481824531303128598, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3328888862567255995, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5555,6 +5623,10 @@ PrefabInstance:
     - target: {fileID: 4145664138727263085, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489122973671041697, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4943251853231660377, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_Sprite
@@ -5712,7 +5784,7 @@ GameObject:
   - component: {fileID: 1332537034}
   - component: {fileID: 1332537036}
   - component: {fileID: 1332537035}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: xmas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5801,6 +5873,10 @@ PrefabInstance:
       value: Purple Ornament
       objectReference: {fileID: 0}
     - target: {fileID: 1575726744534423770, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1575726744534423770, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -5856,6 +5932,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Purple Ornament
       objectReference: {fileID: 0}
+    - target: {fileID: 2481824531303128598, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4145664138727263085, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5871,6 +5951,10 @@ PrefabInstance:
     - target: {fileID: 4145664138727263085, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489122973671041697, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4943251853231660377, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_Sprite
@@ -6042,6 +6126,10 @@ PrefabInstance:
       value: Seat
       objectReference: {fileID: 0}
     - target: {fileID: 1575726744534423770, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1575726744534423770, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -6097,6 +6185,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Seat
       objectReference: {fileID: 0}
+    - target: {fileID: 2481824531303128598, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4145664138727263085, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -6112,6 +6204,10 @@ PrefabInstance:
     - target: {fileID: 4145664138727263085, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489122973671041697, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4943251853231660377, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_Sprite
@@ -6266,7 +6362,7 @@ GameObject:
   - component: {fileID: 1372834545}
   - component: {fileID: 1372834547}
   - component: {fileID: 1372834546}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: snowman bird
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6341,7 +6437,7 @@ GameObject:
   - component: {fileID: 1379074899}
   - component: {fileID: 1379074901}
   - component: {fileID: 1379074900}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6438,7 +6534,7 @@ GameObject:
   - component: {fileID: 1429454048}
   - component: {fileID: 1429454047}
   - component: {fileID: 1429454046}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: CloseButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6570,7 +6666,7 @@ GameObject:
   - component: {fileID: 1469066351}
   - component: {fileID: 1469066353}
   - component: {fileID: 1469066352}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: green ornament
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6645,7 +6741,7 @@ GameObject:
   - component: {fileID: 1556513579}
   - component: {fileID: 1556513581}
   - component: {fileID: 1556513580}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: alreadyowned
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6799,7 +6895,7 @@ GameObject:
   - component: {fileID: 1583718534}
   - component: {fileID: 1583718536}
   - component: {fileID: 1583718535}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Coin UI Txt (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6935,7 +7031,7 @@ GameObject:
   - component: {fileID: 1589381415}
   - component: {fileID: 1589381417}
   - component: {fileID: 1589381416}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: snowman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7010,7 +7106,7 @@ GameObject:
   - component: {fileID: 1622598932}
   - component: {fileID: 1622598934}
   - component: {fileID: 1622598933}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7205,7 +7301,7 @@ GameObject:
   - component: {fileID: 1723488065}
   - component: {fileID: 1723488067}
   - component: {fileID: 1723488066}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7280,7 +7376,7 @@ GameObject:
   - component: {fileID: 1737679132}
   - component: {fileID: 1737679134}
   - component: {fileID: 1737679133}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: magenta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7355,7 +7451,7 @@ GameObject:
   - component: {fileID: 1821513404}
   - component: {fileID: 1821513406}
   - component: {fileID: 1821513405}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: OpenGachaButton Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7378,7 +7474,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -230.99997}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1821513405
@@ -7428,8 +7524,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 100.8
+  m_fontSizeBase: 100.8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7491,7 +7587,7 @@ GameObject:
   - component: {fileID: 1823101998}
   - component: {fileID: 1823102000}
   - component: {fileID: 1823101999}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Background Img
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7594,7 +7690,7 @@ GameObject:
   - component: {fileID: 1947945427}
   - component: {fileID: 1947945426}
   - component: {fileID: 1947945429}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -7645,10 +7741,10 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 540
-  m_Depth: -1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -7730,7 +7826,7 @@ GameObject:
   - component: {fileID: 1990212738}
   - component: {fileID: 1990212740}
   - component: {fileID: 1990212739}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: gold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7835,6 +7931,10 @@ PrefabInstance:
       value: Inflatable Santa
       objectReference: {fileID: 0}
     - target: {fileID: 1575726744534423770, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1575726744534423770, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -7898,6 +7998,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inflatable Santa
       objectReference: {fileID: 0}
+    - target: {fileID: 2481824531303128598, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3328888862567255995, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7929,6 +8033,10 @@ PrefabInstance:
     - target: {fileID: 4145664138727263085, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489122973671041697, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4943251853231660377, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_Sprite
@@ -8106,7 +8214,7 @@ GameObject:
   - component: {fileID: 2055493493}
   - component: {fileID: 2055493495}
   - component: {fileID: 2055493494}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: candy cane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8181,7 +8289,7 @@ GameObject:
   - component: {fileID: 2071895012}
   - component: {fileID: 2071895014}
   - component: {fileID: 2071895013}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: blue_ornament
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8270,6 +8378,10 @@ PrefabInstance:
       value: Blue Ornament
       objectReference: {fileID: 0}
     - target: {fileID: 1575726744534423770, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1575726744534423770, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -8325,6 +8437,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Ornament
       objectReference: {fileID: 0}
+    - target: {fileID: 2481824531303128598, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4145664138727263085, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8340,6 +8456,10 @@ PrefabInstance:
     - target: {fileID: 4145664138727263085, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489122973671041697, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4943251853231660377, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_Sprite
@@ -8497,7 +8617,7 @@ GameObject:
   - component: {fileID: 2092830396}
   - component: {fileID: 2092830398}
   - component: {fileID: 2092830397}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: red ornament
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8594,6 +8714,10 @@ PrefabInstance:
       value: Candy Cane
       objectReference: {fileID: 0}
     - target: {fileID: 1575726744534423770, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1575726744534423770, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -8645,6 +8769,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Candy Cane
       objectReference: {fileID: 0}
+    - target: {fileID: 2481824531303128598, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3328888862567255995, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_SizeDelta.y
       value: 42.1393
@@ -8664,6 +8792,10 @@ PrefabInstance:
     - target: {fileID: 4145664138727263085, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 114
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489122973671041697, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4943251853231660377, guid: 41844a943f143f248a631bbd8dbdf545, type: 3}
       propertyPath: m_Sprite
