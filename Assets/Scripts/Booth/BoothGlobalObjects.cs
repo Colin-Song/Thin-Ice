@@ -18,4 +18,13 @@ public class BoothGlobalObjects : MonoBehaviour
     public static bool prewalk, middle, afterwalkr, afterwalkl;
 
     public static int customers;
+
+    public static int lfobjects;
+
+    public static bool PopUp;
+
+    private void Start()
+    {
+        lfobjects = Random.Range(0, 5);
+    }
 }

@@ -54,6 +54,9 @@ TagManager:
   - name: Desk
     uniqueID: 2035453523
     locked: 0
+  - name: Window
+    uniqueID: 3376534829
+    locked: 0
   - name: PiggyBank
     uniqueID: 4044116357
     locked: 0

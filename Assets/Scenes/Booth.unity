@@ -556,7 +556,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -250850939
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 3158819241136547815, guid: 5d3a65843551fa643aa1277c0fe956df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1073,7 +1073,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000538e5279a978a7a177300e1a198f11313f1ce90ad178d450539cae1dc3702fd8ef021bdcf12c170c85510cf13546bbc7a1e6ce53
+  m_ApplyToSortingLayers: 00000000538e5279a978a7a177300e1a198f11313f1ce90ad178d450539cae1dc3702fd8ef021bdcf12c170c85510cf13546bbc7a1e6ce532dd541c9
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1167,6 +1167,9 @@ MonoBehaviour:
   Tattoo: {fileID: 3646308355270840893, guid: 168474b68af313a429a4d6a4f9d45815, type: 3}
   character1: {fileID: 0}
   character2: {fileID: 0}
+  character3: {fileID: 0}
+  character4: {fileID: 0}
+  character5: {fileID: 0}
 --- !u!1 &727372193
 GameObject:
   m_ObjectHideFlags: 0
@@ -1315,7 +1318,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 823234329
-  m_SortingLayer: 13
+  m_SortingLayer: 14
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 0.6862745, g: 0.7058824, b: 0.7568628, a: 1}
@@ -1530,7 +1533,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1016284691}
-  - component: {fileID: 1016284693}
   - component: {fileID: 1016284692}
   m_Layer: 0
   m_Name: Character Spawner
@@ -1566,25 +1568,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0746d177bdbf7ba41b7125637a380f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cat: {fileID: 3669341474603541229, guid: 368960c766a6b264b88d6e4265fffe9a, type: 3}
-  Dog: {fileID: 3669341474603541229, guid: ca8cf0c6cdc1d6a49b973873cfb2dc48, type: 3}
-  Penguin: {fileID: 3669341474603541229, guid: 7ea69b78859422f49be97a1186a6213a, type: 3}
-  Pig: {fileID: 3669341474603541229, guid: 648716a71068bb949a58ccfcc37632bc, type: 3}
-  Bear: {fileID: 3669341474603541229, guid: 41364db91904a0049b4876298bb69ed6, type: 3}
-  prefab: {fileID: 0}
+  Cat1: {fileID: 3669341474603541229, guid: 368960c766a6b264b88d6e4265fffe9a, type: 3}
+  Cat2: {fileID: 3669341474603541229, guid: 3dcf96c2ac3b90742a2cf07b0dbc9fc3, type: 3}
+  Cat3: {fileID: 3669341474603541229, guid: a91b89dede01e934bb51289452e95564, type: 3}
+  Dog1: {fileID: 3669341474603541229, guid: ca8cf0c6cdc1d6a49b973873cfb2dc48, type: 3}
+  Dog2: {fileID: 3669341474603541229, guid: 554d470305328a7449b2317f33728173, type: 3}
+  Dog3: {fileID: 3669341474603541229, guid: 07be6dfeb3b2bb7429cd4bcd220cdbb1, type: 3}
+  Penguin1: {fileID: 3669341474603541229, guid: 7ea69b78859422f49be97a1186a6213a, type: 3}
+  Penguin2: {fileID: 3669341474603541229, guid: 5539c86c964dc3246a600905179e7126, type: 3}
+  Penguin3: {fileID: 3669341474603541229, guid: 1b8d0f435eb15d34a81c097e85df6e3d, type: 3}
+  Pig1: {fileID: 3669341474603541229, guid: 648716a71068bb949a58ccfcc37632bc, type: 3}
+  Pig2: {fileID: 3669341474603541229, guid: e3d1c1ba5c87df14e88cdb2f36b52d43, type: 3}
+  Pig3: {fileID: 3669341474603541229, guid: 6875f98b4060e074c94f53a474a1dbf0, type: 3}
+  Bear1: {fileID: 3669341474603541229, guid: 41364db91904a0049b4876298bb69ed6, type: 3}
+  Bear2: {fileID: 3669341474603541229, guid: f6a8714fc3d17184cb24788d641ea13e, type: 3}
+  Bear3: {fileID: 3669341474603541229, guid: 7d36bee53bb476e4ca196a5959044b15, type: 3}
   characterObject: {fileID: 0}
---- !u!114 &1016284693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1016284690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87c4eba0f336879479815823ac4e8d80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1175937179
 GameObject:
   m_ObjectHideFlags: 0
@@ -2316,7 +2315,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1406068385
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2361,6 +2360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caa1ba1b3654f1845bcee017e07531f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hand: {fileID: 0}
 --- !u!61 &1709451466
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2497,13 +2497,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709451464}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.13, y: 1.82, z: 0}
-  m_LocalScale: {x: 0.82, y: 4.65, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.034449242, w: 0.9994065}
+  m_LocalPosition: {x: 8.2265, y: 1.82, z: 0}
+  m_LocalScale: {x: 1.5530094, y: 4.65, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -3.948}
 --- !u!1 &1743295645
 GameObject:
   m_ObjectHideFlags: 0
@@ -2658,7 +2658,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 497982547
-  m_SortingLayer: 10
+  m_SortingLayer: 11
   m_SortingOrder: 0
   m_Sprite: {fileID: -5667605402143748660, guid: ae5d41d6ec1d6574d91fe28a733bc711, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2908,20 +2908,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b067872b064784b9c95f5714a14aa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nothing: {fileID: 0}
-  hand: {fileID: 0}
-  popup: {fileID: 0}
-  POPUP: {fileID: 0}
-  shoe: {fileID: 0}
-  shirt: {fileID: 0}
-  pants: {fileID: 0}
-  phone: {fileID: 0}
-  wallet: {fileID: 0}
-  first_item: {fileID: 0}
-  sec_item: {fileID: 0}
-  third_item: {fileID: 0}
-  fourth_item: {fileID: 0}
-  fifth_item: {fileID: 0}
+  POPUP: {fileID: 5700765976527252390, guid: 9885f56cca25e794b918c10a68958d1a, type: 3}
+  SHOE: {fileID: 6659706545814185758, guid: 9891aeea1736ad847ae49f3d5da8b584, type: 3}
+  SHIRT: {fileID: 2603678560439352725, guid: ad162e804c0d93d499c740ceebc00edf, type: 3}
+  PANTS: {fileID: 7126952980445037631, guid: 5ef6b8f909b58e8448f848a071a3a500, type: 3}
+  PHONE: {fileID: 5788444094317406179, guid: 0b4aaf37232d44b4d91afdbc1e723698, type: 3}
+  WALLET: {fileID: 79499156617142323, guid: 77fa435b0adc5f94db39c318e2b46bea, type: 3}
 --- !u!50 &1906225016
 Rigidbody2D:
   serializedVersion: 5
@@ -3037,7 +3029,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -944028107
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 808478217199417721, guid: a7a8286533e65654a90c7e60eb9a9eb8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

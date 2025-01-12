@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4076539076826573162}
   - component: {fileID: 1230369838854103227}
   - component: {fileID: -9022688123928595598}
+  - component: {fileID: 6090695547370924632}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -176,51 +177,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b99ada8849f1154481c21eef3c8d911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cs1i: {fileID: -1573194853779054211, guid: e8472471e42482d40b2e51ae061d49dc, type: 3}
-  cs2i: {fileID: 4040733211065797982, guid: 8f9013d052463eb4b93330869d85fb3e, type: 3}
-  cs3i: {fileID: -2991263264208332892, guid: dc9acffc7ef7060448f12f8f4bcdea5c, type: 3}
-  ds1i: {fileID: 2279228867454281353, guid: c6a77335156bbe548b67914b145b486a, type: 3}
-  ds2i: {fileID: -4189393163261902272, guid: 0c500d975536f9f43b0b886b67198b0c, type: 3}
-  ds3i: {fileID: 8229575290401049565, guid: c5f9a80d2cf319045909ddea0e3db004, type: 3}
-  ps1i: {fileID: -951391023803887269, guid: 7924c5f291038a94d9ac20ad3d24436c, type: 3}
-  ps2i: {fileID: 5682221386574293101, guid: e91c2ca01c1fc9b4aa96717b3b0d47de, type: 3}
-  ps3i: {fileID: 7300509941601261064, guid: 9347fbd3df2a84c4d89ab83a3cfedcf9, type: 3}
-  pis1i: {fileID: -6743413166385878769, guid: f4f6decd4765432449f7aae6415f9b28, type: 3}
-  pis2i: {fileID: -9056036340899006227, guid: 1d9d94b1b3dfe78448a88d149bab8bfb, type: 3}
-  pis3i: {fileID: 7513023068776252076, guid: 5578fe15290f318489bca7bbe3780ddb, type: 3}
-  bs1i: {fileID: 2173730670582822485, guid: 6febc39d26eec2c43bc5c8d26eaf55bb, type: 3}
-  bs2i: {fileID: 8782308210262884578, guid: ae60e71fea38044409aa8d1d4bf15422, type: 3}
-  bs3i: {fileID: 4004641816108681082, guid: d4a0f8ce94ce9394f9731bdb40dc1b5f, type: 3}
-  cs1m: {fileID: -2359638610136418311, guid: b2623fb5db0e3a941a3a5393a9062cea, type: 3}
-  cs2m: {fileID: 8903766432266672828, guid: 7a2c4885071a4db45a7f1ada9fa33fd4, type: 3}
-  cs3m: {fileID: 8245074977905487612, guid: b009ed3a1e21ab9479585bb83d8dc900, type: 3}
-  ds1m: {fileID: 2640032191131131899, guid: a3a2a6374d3aadd42a3e4d959ff7461f, type: 3}
-  ds2m: {fileID: 3822560283474617340, guid: aed29c8731512b843a751fd588a6ac4d, type: 3}
-  ds3m: {fileID: -4019088320933149833, guid: 172ab8d12bbbe3643a7bfe3c277f6288, type: 3}
-  ps1m: {fileID: -2141070381074588827, guid: c8e327f695ce20c41b4e231ee57dfcf4, type: 3}
-  ps2m: {fileID: -3187015552244037171, guid: 62039186b7b47064395d064e23356216, type: 3}
-  ps3m: {fileID: -4831646426718848487, guid: 554b4f6101e792f48b44ca32b8cdd060, type: 3}
-  pis1m: {fileID: -627341691909175014, guid: 9485431a02f813f4087dcd471eb02580, type: 3}
-  pis2m: {fileID: 2917094881976592679, guid: 8b4190da6d68747489f540f7ffac5cd5, type: 3}
-  pis3m: {fileID: -8238061126676538770, guid: d6b269d1fbcce3a4584550e154c83d6f, type: 3}
-  bs1m: {fileID: -5184628412872980736, guid: 2a8b3c6791f01d54f89eb750d3dff211, type: 3}
-  bs2m: {fileID: 7630752120737118242, guid: a261221f17f077a47ac0eb29b50b2614, type: 3}
-  bs3m: {fileID: -3483190061351442634, guid: 071ba181c702e8d4da564269c2742733, type: 3}
-  cs1o: {fileID: -7056286524574205405, guid: 33ad26d5afb600c488ea184b89967a46, type: 3}
-  cs2o: {fileID: -5130080953852789378, guid: 3bf1c57a075bb9e479bdf166f5858da6, type: 3}
-  cs3o: {fileID: -4085268953732132477, guid: b43e921d3bed8d34381d28792081f46e, type: 3}
-  ds1o: {fileID: 9208211144186394885, guid: 1917d1e79c96d0a44b0f372c1cd11a63, type: 3}
-  ds2o: {fileID: 2484676756977561904, guid: 4485584c8ace01846a81eb23696080e9, type: 3}
-  ds3o: {fileID: -8916314370570415939, guid: 164eea088e39b8644af65ee58d5a6b42, type: 3}
-  ps1o: {fileID: 4067600177327310267, guid: df2fd35f84bc76f4cbe459b3e5caa8ac, type: 3}
-  ps2o: {fileID: 5836783730534282475, guid: 7a21212c73113e04ab2880fffe0ab45b, type: 3}
-  ps3o: {fileID: -8688361458706447046, guid: 20f97c79a9e24ee4983172f43c24dec0, type: 3}
-  pis1o: {fileID: 4416206888796362988, guid: dbb461a976bccf845a99ca3519906c5e, type: 3}
-  pis2o: {fileID: -3817507347313787651, guid: d4e7f52085ad4cf448d9fd2c4c6358f3, type: 3}
-  pis3o: {fileID: 2477716944316528393, guid: 7879a39d1d0607c499b3734b09dc754e, type: 3}
-  bs1o: {fileID: -4078612948451461911, guid: a6c7616d8034fc24fb31c29c710d686f, type: 3}
-  bs2o: {fileID: 6260239600676791019, guid: a68e6f84d2b182a4ba2ba9a33f6cfc9c, type: 3}
-  bs3o: {fileID: 1203912600663099640, guid: 15325956e9b8401409396c006fe868f8, type: 3}
 --- !u!114 &-9022688123928595598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,3 +189,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87c4eba0f336879479815823ac4e8d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6090695547370924632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3669341474603541229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4d5b2f31f349ab4b8d634e5b34741de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startsprite: {fileID: -2359638610136418311, guid: 12df36ba8c88d6446847204893fb4dee, type: 3}
+  midsprite: {fileID: -2359638610136418311, guid: b2623fb5db0e3a941a3a5393a9062cea, type: 3}
