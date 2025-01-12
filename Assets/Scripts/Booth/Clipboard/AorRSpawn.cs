@@ -28,7 +28,7 @@ public class AorRSpawn : MonoBehaviour
             }
         }
 
-        if (CharacterInfo.AorR == 'a' || CharacterInfo.AorR == 'r')
+        if (BoothGlobalObjects.AorR == 'a' || BoothGlobalObjects.AorR == 'r' || !BoothGlobalObjects.IsClipboardOpen)
         {
             ButtonDelete();
             buttonsOn = false;

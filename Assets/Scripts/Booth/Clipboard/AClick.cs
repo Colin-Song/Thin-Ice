@@ -20,7 +20,7 @@ public class AClick : MonoBehaviour
                 Collider2D acceptCollider = GetComponent<Collider2D>();
                 if (handCollider.bounds.Intersects(acceptCollider.bounds))
                 {
-                    CharacterInfo.AorR = 'a';
+                    BoothGlobalObjects.AorR = 'a';
                 }
             }
         }

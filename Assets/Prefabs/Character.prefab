@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.29, y: 0.69, z: 0}
-  m_LocalScale: {x: 5.1833, y: 2.9124, z: 1}
+  m_LocalScale: {x: 0.44, y: 0.44, z: 0.44}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.93143034, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -175,3 +175,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b99ada8849f1154481c21eef3c8d911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cs1i: {fileID: 0}
+  cs2i: {fileID: 0}
+  cs3i: {fileID: 0}
+  ds1i: {fileID: 0}
+  ds2i: {fileID: 0}
+  ds3i: {fileID: 0}
+  ps1i: {fileID: 0}
+  ps2i: {fileID: 0}
+  ps3i: {fileID: 0}
+  pis1i: {fileID: 0}
+  pis2i: {fileID: 0}
+  pis3i: {fileID: 0}
+  bs1i: {fileID: 0}
+  bs2i: {fileID: 0}
+  bs3i: {fileID: 0}
+  cs1m: {fileID: 0}
+  cs2m: {fileID: 0}
+  cs3m: {fileID: 0}
+  ds1m: {fileID: 0}
+  ds2m: {fileID: 0}
+  ds3m: {fileID: 0}
+  ps1m: {fileID: 0}
+  ps2m: {fileID: 0}
+  ps3m: {fileID: 0}
+  pis1m: {fileID: 0}
+  pis2m: {fileID: 0}
+  pis3m: {fileID: 0}
+  bs1m: {fileID: 0}
+  bs2m: {fileID: 0}
+  bs3m: {fileID: 0}
+  cs1o: {fileID: 0}
+  cs2o: {fileID: 0}
+  cs3o: {fileID: 0}
+  ds1o: {fileID: 0}
+  ds2o: {fileID: 0}
+  ds3o: {fileID: 0}
+  ps1o: {fileID: 0}
+  ps2o: {fileID: 0}
+  ps3o: {fileID: 0}
+  pis1o: {fileID: 0}
+  pis2o: {fileID: 0}
+  pis3o: {fileID: 0}
+  bs1o: {fileID: 0}
+  bs2o: {fileID: 0}
+  bs3o: {fileID: 0}

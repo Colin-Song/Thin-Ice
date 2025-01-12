@@ -16,7 +16,8 @@ public class HandMovement : MonoBehaviour
 
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
         mousePosition.z = transform.position.z;
-        mousePosition.y -= 0.8f;
+        mousePosition.y -= 5.7f;
+        mousePosition.x -= 0.6f;
 
         transform.position = mousePosition;
     }

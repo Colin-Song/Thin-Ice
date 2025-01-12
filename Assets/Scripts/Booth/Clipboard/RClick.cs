@@ -20,7 +20,7 @@ public class RClick : MonoBehaviour
                 Collider2D rejectCollider = GetComponent<Collider2D>();
                 if (handCollider.bounds.Intersects(rejectCollider.bounds))
                 {
-                    CharacterInfo.AorR = 'r';
+                    BoothGlobalObjects.AorR = 'r';
                 }
             }
         }
