@@ -14,10 +14,7 @@ public class TimeManager : MonoBehaviour
     // 12 in-game hours (8 AM to 8 PM) = 720 minutes
     private float minutesPerDay = 720f;
 
-    [Header("Current Game Time")]
-    public int day = 1;
-    private int hour;
-    private int minute; // We'll track minutes internally, but won't display them
+    
 
     [Header("UI References")]
     public TextMeshProUGUI timeDisplay;     // Reference to the UI TextMeshPro (for time)
@@ -34,22 +31,12 @@ public class TimeManager : MonoBehaviour
 
     private Animator _animator;
 
-    public string[] dailySummaryLines = new string[5]
-    {
-        "You collected 10 coins.",
-        "You defeated 2 enemies.",
-        "You gained 50 XP.",
-        "You found 1 rare item.",
-        "End of Day results complete."
-    };
+    
 
     private void Start()
     {
         _animator = GameObject.Find("IrisOut").GetComponent<Animator>();
         // Start on Day 1 at 8:00 AM
-        day = 1;
-        hour = 8;
-        minute = 0;
         
         // 8:00 AM corresponds to 0 "day minutes" in our system
         currentDayTimeInMinutes = 0f;
@@ -68,8 +55,9 @@ public class TimeManager : MonoBehaviour
     private void Update()
     {
         // If the day has ended, stop updating time until "Next Day" is clicked
-        if (isDayEnded) return;
-
+        if (isDayEnded){
+            return;
+        }
         // Convert real-time seconds to in-game minutes
         // 30 real seconds => 720 in-game minutes
         float inGameMinutesPerRealSecond = minutesPerDay / realSecondsPerGameDay;
@@ -82,6 +70,10 @@ public class TimeManager : MonoBehaviour
         {
             isDayEnded = true;
             // Show the "Day End" panel
+            GlobalObjects.Instance.day++;
+            GlobalObjects.Instance.hour = 8;
+            GlobalObjects.Instance.minute = 0;
+
             timeDisplay.gameObject.SetActive(false);
            
             IrisIn();
@@ -96,28 +88,24 @@ public class TimeManager : MonoBehaviour
         // 8 AM => 480 minutes into a normal 24-hr cycle
 
         // Convert to hour/minute
-        hour   = (int)(absoluteMinutesOfDay / 60f) % 24;
-        minute = (int)(absoluteMinutesOfDay % 60);  
+        GlobalObjects.Instance.hour   = (int)(absoluteMinutesOfDay / 60f) % 24;
+        GlobalObjects.Instance.minute = (int)(absoluteMinutesOfDay % 60);  
 
         // Update the UI text (without minutes, as requested)
         if (timeDisplay != null)
         {
             // Convert 24-hour to 12-hour format
-            bool isAM       = (hour < 12);
-            int displayHour = hour % 12;
+            bool isAM       = (GlobalObjects.Instance.hour < 12);
+            int displayHour = GlobalObjects.Instance.hour % 12;
             if (displayHour == 0) displayHour = 12; // 12-hour clock "0" => "12"
 
             string amPmLabel = isAM ? "AM" : "PM";
-            timeDisplay.text = $"Day {day} - {displayHour} {amPmLabel}";
+            timeDisplay.text = $"Day {GlobalObjects.Instance.day} - {displayHour} {amPmLabel}";
         }
         
        
     }
 
-    /// <summary>
-    /// Called by the "Next Day" button. 
-    /// Resets time for the new day (8 AM → 8 PM), hides the panel, and resumes time.
-    /// </summary>
     public void StartNextDay()
     {
         SceneManager.LoadScene("Lake");
@@ -144,8 +132,6 @@ public class TimeManager : MonoBehaviour
         ShowDayEndSummary();
         
         yield return new WaitForSeconds(5f);
-
-        SceneManager.LoadScene("Lake");
     }
 
     private IEnumerator deactivatePanel()
@@ -184,6 +170,14 @@ public class TimeManager : MonoBehaviour
 
     private IEnumerator DisplaySummaryLines()
     {
+        string[] dailySummaryLines = new string[4]
+            {
+                "End of Day results for Day " + (GlobalObjects.Instance.day - 1) + ":",
+                "You accepted " + GlobalObjects.Instance.numCustomersAccepted + " customers",
+                "You rejected " + GlobalObjects.Instance.numCustomersRejected + " customers",
+                "You earned " + GlobalObjects.Instance.moneyCollectedToday + " today",
+            };
+
         for (int i = 0; i < dailySummaryLines.Length; i++)
         {
             // Instantiate the prefab for each line
@@ -197,6 +191,8 @@ public class TimeManager : MonoBehaviour
             {
                 textComponent.text = dailySummaryLines[i];
             }
+
+            
 
             // Optional: Customize the image background if needed
             Image backgroundImage = newLine.GetComponent<Image>();

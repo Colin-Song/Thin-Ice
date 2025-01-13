@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 using TMPro;
 
 public class StartGame : MonoBehaviour
@@ -9,11 +10,19 @@ public class StartGame : MonoBehaviour
     public TMP_InputField playerNameInput;
     public Button startGameButton;
     public TextMeshProUGUI warningText; // Assign in Inspector
+    public AudioSource buttonClickSound;
+
+    public GameObject titleContainer;
+    public GameObject welcomeContainer;
+    public Button switchSceneButton;
 
     void Start()
     {
         // Add listener to the start button
         startGameButton.onClick.AddListener(GameStart);
+        startGameButton.onClick.AddListener(playSound);
+        switchSceneButton.onClick.AddListener(() => StartCoroutine(goToBooth()));
+        switchSceneButton.onClick.AddListener(playSound);
 
         // Hide warning text initially
         if (warningText != null)
@@ -60,6 +69,25 @@ public class StartGame : MonoBehaviour
 
         Debug.Log("Starting game for player: " + playerName);
 
+        welcomeText();
+    }
+
+    public void welcomeText()
+    {
+        titleContainer.SetActive(false);
+        welcomeContainer.SetActive(true);
+        
+    }
+    public void playSound()
+    {
+        buttonClickSound.Play();
+    }
+    IEnumerator goToBooth()
+    {
+        buttonClickSound.Play();
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene("Booth");
     }
+
+
 }

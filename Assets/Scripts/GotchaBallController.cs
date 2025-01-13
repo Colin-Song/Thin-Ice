@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using TMPro;
 
-public class OrnamentController : MonoBehaviour
+public class GotchaBallController : MonoBehaviour
 {
     [Header("Rotation Settings")]
     [Tooltip("Initial rotation speed in degrees per second.")]
@@ -25,6 +25,8 @@ public class OrnamentController : MonoBehaviour
     [Tooltip("UI Button to switch scenes.")]
     public Button switchSceneButton; // New Button for switching scenes
 
+    public AudioSource spinSound;
+
 
     [Tooltip("Reference to the child objects to rotate.")]
     public Transform child1; // Assign via Inspector
@@ -37,6 +39,7 @@ public class OrnamentController : MonoBehaviour
     public TMP_Text warningText;
 
     private int moneyCount;
+
 
     void Start()
     {
@@ -91,7 +94,6 @@ public class OrnamentController : MonoBehaviour
     /// </summary>
     public void SpeedUpRotation()
     {
-        Debug.Log("spin.");
         if (GlobalObjects.Instance.money > 0)
         {
             warningText.text = "Not enough coins!";
@@ -99,6 +101,7 @@ public class OrnamentController : MonoBehaviour
             return;
         }
         else {
+            spinSound.Play();
             rotationSpeed += speedIncrement;
             GlobalObjects.Instance.money -= 15;
             Debug.Log("Ornament rotation speed increased to: " + rotationSpeed + " degrees/sec.");
@@ -113,10 +116,6 @@ public class OrnamentController : MonoBehaviour
     public void SwitchScene()
     {
         SceneManager.LoadScene(targetSceneName);
-
-        
-        ShopManagerScript.ifSpinSuccessful = true;
-        Debug.Log("Switching to scene: " + targetSceneName);
     }
 
     /// <summary>
@@ -126,10 +125,9 @@ public class OrnamentController : MonoBehaviour
     /// <returns></returns>
     private IEnumerator SwitchSceneAfterDelay()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         SceneManager.LoadScene(targetSceneName);
         ShopManagerScript.ifSpinSuccessful = true;
-        Debug.Log("Switching to scene: " + targetSceneName);
     }
 
 }
