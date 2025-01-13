@@ -8,6 +8,12 @@ public class GlobalObjects: MonoBehaviour
     public int money;
     public int X;
     public bool killerIn;
+    public int day;
+    public int hour;
+    public int minute;
+    public int moneyCollectedToday;
+    public int numCustomersAccepted;
+    public int numCustomersRejected;
 
     public Dictionary<string, bool> objectsInScene = new Dictionary<string, bool>(); // Has all objects in the scene
 
@@ -32,6 +38,12 @@ public class GlobalObjects: MonoBehaviour
     {
         // Initialize the dictionary in Awake to ensure it's ready before any other script accesses it
         money = 0;
+        day = 1;
+        hour = 8;
+        minute = 0;
+        moneyCollectedToday = 0;
+        numCustomersAccepted = 0;
+        numCustomersRejected = 0;
 
         string[] allItems = {
             "Blue Ornament", "Candy Cane", "Christmas Lights", 
