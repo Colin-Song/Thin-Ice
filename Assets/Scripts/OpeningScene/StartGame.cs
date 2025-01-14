@@ -19,10 +19,12 @@ public class StartGame : MonoBehaviour
     void Start()
     {
         // Add listener to the start button
-        startGameButton.onClick.AddListener(GameStart);
         startGameButton.onClick.AddListener(playSound);
-        switchSceneButton.onClick.AddListener(() => StartCoroutine(goToBooth()));
+        startGameButton.onClick.AddListener(GameStart);
+        
         switchSceneButton.onClick.AddListener(playSound);
+        switchSceneButton.onClick.AddListener(() => StartCoroutine(goToBooth()));
+       
 
         // Hide warning text initially
         if (warningText != null)
@@ -78,7 +80,7 @@ public class StartGame : MonoBehaviour
         welcomeContainer.SetActive(true);
         
     }
-    public void playSound()
+    void playSound()
     {
         buttonClickSound.Play();
     }

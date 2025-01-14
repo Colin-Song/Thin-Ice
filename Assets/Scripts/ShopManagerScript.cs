@@ -85,6 +85,7 @@ public class ShopManagerScript : MonoBehaviour
                 }
             }
             ifSpinSuccessful = false;
+            OpenGachaWindow()l
             OnGachaAnimationComplete();
         }
     }
