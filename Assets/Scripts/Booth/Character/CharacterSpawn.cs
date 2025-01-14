@@ -9,12 +9,19 @@ public class CharacterSpawn : MonoBehaviour
     public static int skin, type;
     public GameObject Cat1, Cat2, Cat3, Dog1, Dog2, Dog3, Penguin1, Penguin2, Penguin3, Pig1, Pig2, Pig3, Bear1, Bear2, Bear3;
     public GameObject characterObject;
+    string[] animals = new string[] { "Cat", "Dog", "Penguin", "Pig", "Bear" };
+    Vector3 PrefabPosition;
+    Quaternion spawnRotation;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        posx = -11.8f;
+        posy = 0.69f;
+        posz = 0f;
+        Vector3 PrefabPosition = new Vector3(posx, posy, posz);
+        spawnRotation = Quaternion.identity;
     }
 
     // Update is called once per frame
@@ -22,6 +29,7 @@ public class CharacterSpawn : MonoBehaviour
     {
         if (!BoothGlobalObjects.CharOnScreen)
         {
+
             BoothGlobalObjects.CharOnScreen = true;
             CharSpawn();
         }
@@ -29,20 +37,12 @@ public class CharacterSpawn : MonoBehaviour
 
     void CharSpawn()
     {
-        posx = -11.8f;
-        posy = 0.69f;
-        posz = 0f;
-
         BoothGlobalObjects.AorR = 'n';
         BoothGlobalObjects.prewalk = true;
         BoothGlobalObjects.middle = false;
         BoothGlobalObjects.afterwalkr = false;
         BoothGlobalObjects.afterwalkl = false;
 
-        Vector3 PrefabPosition = new Vector3(posx, posy, posz);
-        Quaternion spawnRotation = Quaternion.identity;
-
-        string[] animals = new string[] { "Cat", "Dog", "Penguin", "Pig", "Bear" };
         type = Random.Range(0, 5);
         skin = Random.Range(0, 3);
         if (type == 0)
@@ -123,13 +123,13 @@ public class CharacterSpawn : MonoBehaviour
 
         CharacterAttributes character = characterObject.GetComponent<CharacterAttributes>();
 
-        character.TYPE = animals[type].ToString();
-        character.GENDER = Random.Range(0, 2) == 0 ? "Male" : "Female";
-        character.AGE = Random.Range(1, 100); // Age between 1 and 99
-        character.HEIGHT = Random.Range(100, 200); // Height between 100 and 199
-        character.KILLER = Random.Range(0, 2) == 0;
-        character.TATTOO = character.KILLER && Random.Range(0, 2) == 0;
+        BoothGlobalObjects.TYPE = animals[type].ToString();
+        BoothGlobalObjects.GENDER = Random.Range(0, 2) == 0 ? "Male" : "Female";
+        BoothGlobalObjects.AGE = Random.Range(1, 100); // Age between 1 and 99
+        BoothGlobalObjects.HEIGHT = Random.Range(100, 200); // Height between 100 and 199
+        BoothGlobalObjects.KILLER = Random.Range(0, 2) == 0;
+        BoothGlobalObjects.TATTOO = BoothGlobalObjects.KILLER && Random.Range(0, 2) == 0;
 
-        Debug.Log(character.TYPE + " " + character.GENDER + " " + character.AGE + " " + character.HEIGHT + " " + character.KILLER + " " + character.TATTOO);
+        //Debug.Log(BoothGlobalObjects.TYPE + " " + BoothGlobalObjects.GENDER + " " + BoothGlobalObjects.AGE + " " + BoothGlobalObjects.HEIGHT + " " + BoothGlobalObjects.KILLER + " " + BoothGlobalObjects.TATTOO);
     }
 }

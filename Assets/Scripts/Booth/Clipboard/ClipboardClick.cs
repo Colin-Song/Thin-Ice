@@ -37,20 +37,27 @@ public class ClipboardClick : MonoBehaviour
                         if (BoothGlobalObjects.IsClipboardOpen)
                         {
                             spriteRenderer.sprite = newSprite2;
+
                             BoothGlobalObjects.Clipboardposx = transform.position.x;
                             BoothGlobalObjects.Clipboardposy = transform.position.y;
+
                             transform.localScale = bigScale;
                             transform.position = new Vector3(0, 0, 0);
+
                             clipboardCollider.GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("OpenObject");
+
                             b_Collider = clipboardCollider.GetComponent<BoxCollider2D>();
                             b_Collider.size = new Vector2(15.53f, 15.53f);
                         }
                         else
                         {
                             spriteRenderer.sprite = newSprite1;
+
                             transform.localScale = smallScale;
                             transform.position = new Vector3(BoothGlobalObjects.Clipboardposx, BoothGlobalObjects.Clipboardposy, 0);
+
                             clipboardCollider.GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("Clipboard");
+
                             b_Collider = clipboardCollider.GetComponent<BoxCollider2D>();
                             b_Collider.size = new Vector2(4.01f, 4.01f);
                         }

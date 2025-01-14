@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AfternoonBoothbg_0: -6877323258810856090
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,14 +1,12 @@
 using UnityEngine;
-
-
 public class TattooInteract : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
     public float fadeSpeed = 0.3f;
     public GameObject uvlight, tattoo;
 
-    private float uvlposx, uvlposy, uvlposz, tposx, tposy, tposz;
-    UnityEngine.Color color;
+    private float uvlposx, uvlposy, tposx, tposy;
+    Color color;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

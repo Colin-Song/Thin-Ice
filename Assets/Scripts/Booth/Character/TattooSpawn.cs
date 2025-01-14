@@ -26,8 +26,7 @@ public class TattooSpawn : MonoBehaviour
                 Debug.Log("hi");
                 if (character1 != null)
                 {
-                    CharacterAttributes char1attributes = character1.GetComponent<CharacterAttributes>();
-                    if (char1attributes.TATTOO && !BoothGlobalObjects.TattooOn)
+                    if (BoothGlobalObjects.TATTOO && !BoothGlobalObjects.TattooOn)
                     {
                         TattooCreate();
                         BoothGlobalObjects.TattooOn = true;
@@ -35,8 +34,7 @@ public class TattooSpawn : MonoBehaviour
                 }
                 else if (character2 != null)
                 {
-                    CharacterAttributes char2attributes = character2.GetComponent<CharacterAttributes>();
-                    if (char2attributes.TATTOO && !BoothGlobalObjects.TattooOn)
+                    if (BoothGlobalObjects.TATTOO && !BoothGlobalObjects.TattooOn)
                     {
                         TattooCreate();
                         BoothGlobalObjects.TattooOn = true;
@@ -44,8 +42,7 @@ public class TattooSpawn : MonoBehaviour
                 }
                 else if (character3 != null)
                 {
-                    CharacterAttributes char3attributes = character3.GetComponent<CharacterAttributes>();
-                    if (char3attributes.TATTOO && !BoothGlobalObjects.TattooOn)
+                    if (BoothGlobalObjects.TATTOO && !BoothGlobalObjects.TattooOn)
                     {
                         TattooCreate();
                         BoothGlobalObjects.TattooOn = true;
@@ -53,8 +50,7 @@ public class TattooSpawn : MonoBehaviour
                 }
                 else if (character4 != null)
                 {
-                    CharacterAttributes char4attributes = character4.GetComponent<CharacterAttributes>();
-                    if (char4attributes.TATTOO && !BoothGlobalObjects.TattooOn)
+                    if (BoothGlobalObjects.TATTOO && !BoothGlobalObjects.TattooOn)
                     {
                         TattooCreate();
                         BoothGlobalObjects.TattooOn = true;
@@ -62,8 +58,7 @@ public class TattooSpawn : MonoBehaviour
                 }
                 else if (character5 != null)
                 {
-                    CharacterAttributes char5attributes = character5.GetComponent<CharacterAttributes>();
-                    if (char5attributes.TATTOO && !BoothGlobalObjects.TattooOn)
+                    if (BoothGlobalObjects.TATTOO && !BoothGlobalObjects.TattooOn)
                     {
                         TattooCreate();
                         BoothGlobalObjects.TattooOn = true;

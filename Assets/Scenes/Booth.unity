@@ -639,7 +639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df58f413f7ee149eda2d6c034d84d78c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  realSecondsPerGameDay: 10
+  realSecondsPerGameDay: 900
   timeDisplay: {fileID: 1922436496}
   summaryContainer: {fileID: 1676366172}
   summaryLinePrefab: {fileID: 748962408}
@@ -1333,7 +1333,7 @@ Transform:
   m_GameObject: {fileID: 727372193}
   serializedVersion: 2
   m_LocalRotation: {x: -0.012779316, y: 0.015020313, z: -0.7614926, w: 0.6478736}
-  m_LocalPosition: {x: -2.8093061, y: -4.329998, z: 0}
+  m_LocalPosition: {x: -2.8093061, y: -5.01, z: 0}
   m_LocalScale: {x: 0.453057, y: 0.24385813, z: 0.18608978}
   m_ConstrainProportionsScale: 1
   m_Children: []

@@ -6,7 +6,7 @@ public class FlashlightMovement : MonoBehaviour
     private Vector3 offset;
     public GameObject hand;
     public Sprite newSprite;
-    UnityEngine.Color color;
+    Color color;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

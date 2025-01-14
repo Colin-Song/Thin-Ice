@@ -24,8 +24,7 @@ public class CustomerCheck : MonoBehaviour
 
             if (char1 != null)
             {
-                CharacterAttributes char1attributes = char1.GetComponent<CharacterAttributes>();
-                if (char1attributes.KILLER)
+                if (BoothGlobalObjects.KILLER)
                 {
                     GlobalObjects.Instance.killerIn = true;
                     SceneManager.LoadScene("MurderEnding");
@@ -38,8 +37,7 @@ public class CustomerCheck : MonoBehaviour
             }
             else if (char2 != null)
             {
-                CharacterAttributes char2attributes = char2.GetComponent<CharacterAttributes>();
-                if (char2attributes.KILLER)
+                if (BoothGlobalObjects.KILLER)
                 {
                     GlobalObjects.Instance.killerIn = true;
                     SceneManager.LoadScene("MurderEnding");
@@ -52,8 +50,7 @@ public class CustomerCheck : MonoBehaviour
             }
             else if (char3 != null)
             {
-                CharacterAttributes char3attributes = char3.GetComponent<CharacterAttributes>();
-                if (char3attributes.KILLER)
+                if (BoothGlobalObjects.KILLER)
                 {
                     GlobalObjects.Instance.killerIn = true;
                     SceneManager.LoadScene("MurderEnding");
@@ -66,8 +63,7 @@ public class CustomerCheck : MonoBehaviour
             }
             else if (char4 != null)
             {
-                CharacterAttributes char4attributes = char4.GetComponent<CharacterAttributes>();
-                if (char4attributes.KILLER)
+                if (BoothGlobalObjects.KILLER)
                 {
                     GlobalObjects.Instance.killerIn = true;
                     SceneManager.LoadScene("MurderEnding");
@@ -80,8 +76,7 @@ public class CustomerCheck : MonoBehaviour
             }
             else if (char5 != null)
             {
-                CharacterAttributes char5attributes = char5.GetComponent<CharacterAttributes>();
-                if (char5attributes.KILLER)
+                if (BoothGlobalObjects.KILLER)
                 {
                     GlobalObjects.Instance.killerIn = true;
                     SceneManager.LoadScene("MurderEnding");
@@ -103,8 +98,7 @@ public class CustomerCheck : MonoBehaviour
 
             if (char1 != null)
             {
-                CharacterAttributes char1attributes = char1.GetComponent<CharacterAttributes>();
-                if (!char1attributes.KILLER)
+                if (!BoothGlobalObjects.KILLER)
                 {
                     GlobalObjects.Instance.X += 1;
                     if (GlobalObjects.Instance.X >= 3)
@@ -120,8 +114,7 @@ public class CustomerCheck : MonoBehaviour
             }
             else if (char2 != null)
             {
-                CharacterAttributes char2attributes = char2.GetComponent<CharacterAttributes>();
-                if (!char2attributes.KILLER)
+                if (!BoothGlobalObjects.KILLER)
                 {
                     GlobalObjects.Instance.X += 1;
                     if (GlobalObjects.Instance.X >= 3)
@@ -136,8 +129,7 @@ public class CustomerCheck : MonoBehaviour
             }
             else if (char3 != null)
             {
-                CharacterAttributes char3attributes = char3.GetComponent<CharacterAttributes>();
-                if (!char3attributes.KILLER)
+                if (!BoothGlobalObjects.KILLER)
                 {
                     GlobalObjects.Instance.X += 1;
                     if (GlobalObjects.Instance.X >= 3)
@@ -152,8 +144,7 @@ public class CustomerCheck : MonoBehaviour
             }
             else if (char4 != null)
             {
-                CharacterAttributes char4attributes = char4.GetComponent<CharacterAttributes>();
-                if (!char4attributes.KILLER)
+                if (!BoothGlobalObjects.KILLER)
                 {
                     GlobalObjects.Instance.X += 1;
                     if (GlobalObjects.Instance.X >= 3)
@@ -168,8 +159,7 @@ public class CustomerCheck : MonoBehaviour
             }
             else if (char5 != null)
             {
-                CharacterAttributes char5attributes = char5.GetComponent<CharacterAttributes>();
-                if (!char5attributes.KILLER)
+                if (!BoothGlobalObjects.KILLER)
                 {
                     GlobalObjects.Instance.X += 1;
                     if (GlobalObjects.Instance.X >= 3)

@@ -1,21 +1,12 @@
-using System.Collections.Generic;
-using System.Linq;
-using NUnit.Framework.Constraints;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class LostFoundClick : MonoBehaviour
 {
-    public Canvas canvas; // Reference to the Canvas in the scene
-    private GameObject textBox1, textBox2, textBox3, textBox4, textBox5;
     private float posx, posy, posz;
     public static int item_count = BoothGlobalObjects.lfobjects;
     public  GameObject POPUP;
     public GameObject SHOE, SHIRT, PANTS, PHONE, WALLET;
     public static GameObject hand, popup, shoe, shirt, pants, phone, wallet;
-    private GameObject prop;
     public static bool popupdestroy;
 
     public static float pos1x, pos1y, pos2x, pos2y, pos3x, pos3y, pos4x, pos4y, pos5x, pos5y;
@@ -41,6 +32,10 @@ public class LostFoundClick : MonoBehaviour
 
         pos5x = 0.91f;
         pos5y = 1.08f;
+
+        posx = 0f;
+        posy = 0f;
+        posz = 0f;
     }
 
     // Update is called once per frame
@@ -71,10 +66,6 @@ public class LostFoundClick : MonoBehaviour
 
     void Popup()
     {
-        posx = 0f;
-        posy = 0f;
-        posz = 0f;
-
         Vector3 PopupPosition = new Vector3(posx, posy, posz);
         Quaternion spawnRotation = Quaternion.identity;
         popup = Instantiate(POPUP, PopupPosition, spawnRotation);
@@ -85,51 +76,6 @@ public class LostFoundClick : MonoBehaviour
         Vector3 position3 = new Vector3(pos3x, pos3y, 0f);
         Vector3 position4 = new Vector3(pos4x, pos4y, 0f);
         Vector3 position5 = new Vector3(pos5x, pos5y, 0f);
-
-        GameObject textObject1 = new GameObject("TextBox");
-        TextMeshProUGUI textComponent1 = textObject1.AddComponent<TextMeshProUGUI>();
-        textComponent1.text = "x1";
-        textComponent1.fontSize = 12;
-        textComponent1.color = Color.black;
-        textObject1.transform.SetParent(canvas.transform, false);
-        RectTransform rectTransform1 = textObject1.GetComponent<RectTransform>();
-        rectTransform1.anchoredPosition = new Vector2(pos1x + 0.3f, pos1y);
-
-        GameObject textObject2 = new GameObject("TextBox");
-        TextMeshProUGUI textComponent2 = textObject2.AddComponent<TextMeshProUGUI>();
-        textComponent2.text = "x1";
-        textComponent2.fontSize = 12;
-        textComponent2.color = Color.black;
-        textObject2.transform.SetParent(canvas.transform, false);
-        RectTransform rectTransform2 = textObject2.GetComponent<RectTransform>();
-        rectTransform2.anchoredPosition = new Vector2(pos2x + 0.3f, pos2y);
-
-        GameObject textObject3 = new GameObject("TextBox");
-        TextMeshProUGUI textComponent3 = textObject3.AddComponent<TextMeshProUGUI>();
-        textComponent3.text = "x1";
-        textComponent3.fontSize = 12;
-        textComponent3.color = Color.black;
-        textObject3.transform.SetParent(canvas.transform, false);
-        RectTransform rectTransform3 = textObject3.GetComponent<RectTransform>();
-        rectTransform3.anchoredPosition = new Vector2(pos3x + 0.3f, pos3y);
-
-        GameObject textObject4 = new GameObject("TextBox");
-        TextMeshProUGUI textComponent4 = textObject4.AddComponent<TextMeshProUGUI>();
-        textComponent4.text = "x1";
-        textComponent4.fontSize = 12;
-        textComponent4.color = Color.black;
-        textObject4.transform.SetParent(canvas.transform, false);
-        RectTransform rectTransform4 = textObject4.GetComponent<RectTransform>();
-        rectTransform4.anchoredPosition = new Vector2(pos4x + 0.3f, pos4y);
-
-        GameObject textObject5 = new GameObject("TextBox");
-        TextMeshProUGUI textComponent5 = textObject3.AddComponent<TextMeshProUGUI>();
-        textComponent5.text = "x1";
-        textComponent5.fontSize = 12;
-        textComponent5.color = Color.black;
-        textObject5.transform.SetParent(canvas.transform, false);
-        RectTransform rectTransform5 = textObject5.GetComponent<RectTransform>();
-        rectTransform5.anchoredPosition = new Vector2(pos5x + 0.3f, pos5y);
 
         shoe = Instantiate(SHOE, position1, spawnRotation);
         shoe.GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("Prop");

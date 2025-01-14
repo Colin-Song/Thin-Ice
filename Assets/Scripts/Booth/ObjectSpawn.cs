@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 
 public class ObjectSpawn : MonoBehaviour
 {
@@ -57,7 +56,6 @@ public class ObjectSpawn : MonoBehaviour
         Quaternion spawnRotation = Quaternion.identity;
         clipboard = Instantiate(CLIPBOARD, CBPosition, spawnRotation);
     }
-
     void ObjectsGone()
     {
         Destroy(id);
