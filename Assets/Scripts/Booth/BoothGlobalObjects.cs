@@ -3,7 +3,11 @@ using UnityEngine;
 public class BoothGlobalObjects : MonoBehaviour
 {
     // character info
+
+    
     public static string TYPE = "none";
+
+    public static int skin = 0;
     public static string GENDER = "none";
     public static int AGE = 0;
     public static int HEIGHT = 0;

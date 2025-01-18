@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class WindowClick : MonoBehaviour
 {
     public GameObject hand;
@@ -18,8 +18,8 @@ public class WindowClick : MonoBehaviour
             Collider2D popupCollider = GetComponent<Collider2D>();
             if (handCollider.bounds.Intersects(popupCollider.bounds))
             {
-
-                //go to next scene
+                SceneManager.LoadScene("IceSkating");
+               
             }
         }
     }

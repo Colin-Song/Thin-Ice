@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class IDClick : MonoBehaviour
 {
@@ -6,6 +7,9 @@ public class IDClick : MonoBehaviour
     public GameObject hand;
     public Sprite newSprite1, newSprite2;
     private SpriteRenderer spriteRenderer;
+
+    public GameObject IDpicture;
+    public TextMeshProUGUI IDcontent;
     Collider2D idCollider;
     BoxCollider2D b_Collider;
 
@@ -32,7 +36,6 @@ public class IDClick : MonoBehaviour
                     if (BoothGlobalObjects.IsIDOpen)
                     {
                         spriteRenderer.sprite = newSprite2;
-
                         BoothGlobalObjects.IDposx = transform.position.x;
                         BoothGlobalObjects.IDposy = transform.position.y;
                         transform.localScale = bigScale;
@@ -42,6 +45,11 @@ public class IDClick : MonoBehaviour
 
                         b_Collider = idCollider.GetComponent<BoxCollider2D>();
                         b_Collider.size = new Vector2(15.92f, 9.15f);
+
+                        // IDcontent.GetComponent<Renderer>().sortingLayerID = SortingLayer.NameToID("OpenObject");
+
+
+                        IDcontentController.openId = true; 
                     }
                     else
                     {
@@ -53,9 +61,13 @@ public class IDClick : MonoBehaviour
 
                         b_Collider = idCollider.GetComponent<BoxCollider2D>();
                         b_Collider.size = new Vector2(2.36f, 1.36f);
+
+                        IDcontentController.closeId = false;
                     }
                 }
             }
         }
     }
+
+    
 }

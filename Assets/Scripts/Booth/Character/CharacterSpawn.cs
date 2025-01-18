@@ -124,11 +124,13 @@ public class CharacterSpawn : MonoBehaviour
         CharacterAttributes character = characterObject.GetComponent<CharacterAttributes>();
 
         BoothGlobalObjects.TYPE = animals[type].ToString();
+        BoothGlobalObjects.skin = skin;
         BoothGlobalObjects.GENDER = Random.Range(0, 2) == 0 ? "Male" : "Female";
         BoothGlobalObjects.AGE = Random.Range(1, 100); // Age between 1 and 99
         BoothGlobalObjects.HEIGHT = Random.Range(100, 200); // Height between 100 and 199
         BoothGlobalObjects.KILLER = Random.Range(0, 2) == 0;
         BoothGlobalObjects.TATTOO = BoothGlobalObjects.KILLER && Random.Range(0, 2) == 0;
+
 
         //Debug.Log(BoothGlobalObjects.TYPE + " " + BoothGlobalObjects.GENDER + " " + BoothGlobalObjects.AGE + " " + BoothGlobalObjects.HEIGHT + " " + BoothGlobalObjects.KILLER + " " + BoothGlobalObjects.TATTOO);
     }
